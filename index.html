@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>IS2 THE PITCH · ม.5/4 โรงเรียนพรตพิทยพยัต</title>
+<link rel="icon" href="assets/crest.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ธีม: แบบพิมพ์เขียว (Blueprint) สำหรับแผนการเรียนวิศวกรรม-สถาปัตยกรรม */
+:root{
+  --bp:#0c2d4f; --bp2:#0a2440; --bp3:#123a63;
+  --ln:rgba(173,216,255,.14); --ln2:rgba(173,216,255,.32);
+  --ink:#e8f2fc; --mute:#9db9d6; --cyan:#7fd3ff; --orange:#F0943A; --paper:#f5efe2;
+  --mono:'IBM Plex Mono',monospace; --head:'Chakra Petch','IBM Plex Sans Thai',sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font-family:'IBM Plex Sans Thai','Sarabun',sans-serif;font-size:16.5px;line-height:1.65;
+  background-color:var(--bp);
+  background-image:
+    linear-gradient(var(--ln2) 1px,transparent 1px),linear-gradient(90deg,var(--ln2) 1px,transparent 1px),
+    linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);
+  background-size:100px 100px,100px 100px,20px 20px,20px 20px;background-position:-1px -1px}
+a{color:var(--cyan)}
+.sheet{max-width:1120px;margin:28px auto;padding:0 20px}
+.frame{border:2px solid var(--ink);outline:1px solid var(--ln2);outline-offset:6px;position:relative;background:rgba(10,36,64,.55)}
+/* เครื่องหมายมุมตัด */
+.crop{position:relative}
+.crop::before,.crop::after{content:"";position:absolute;width:18px;height:18px;border-color:var(--orange);border-style:solid}
+.crop::before{top:-7px;left:-7px;border-width:2px 0 0 2px}
+.crop::after{bottom:-7px;right:-7px;border-width:0 2px 2px 0}
+.mono{font-family:var(--mono);letter-spacing:.5px}
+/* title block */
+.tb{display:grid;grid-template-columns:1fr 360px;border-bottom:2px solid var(--ink)}
+.tb-main{padding:30px 32px 26px;display:flex;gap:22px;align-items:center;border-right:2px solid var(--ink)}
+.tb-main img{width:76px;filter:drop-shadow(0 0 8px rgba(127,211,255,.25))}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:3px;color:var(--orange)}
+h1{font-family:var(--head);font-size:52px;line-height:1;margin:6px 0 8px;letter-spacing:2px}
+h1 span{color:transparent;-webkit-text-stroke:1.5px var(--cyan)}
+.tb-main p{margin:0;color:var(--mute);font-size:15px}
+.tb-grid{display:grid;grid-template-columns:1fr 1fr;font-family:var(--mono);font-size:12px}
+.tb-grid div{border-bottom:1px solid var(--ln2);border-right:1px solid var(--ln2);padding:8px 12px}
+.tb-grid div:nth-child(2n){border-right:none}
+.tb-grid b{display:block;color:var(--mute);font-weight:400;font-size:10.5px;letter-spacing:2px}
+.tb-grid span{color:var(--ink);font-size:13.5px;font-family:'IBM Plex Sans Thai',sans-serif}
+nav{display:flex;flex-wrap:wrap;border-bottom:2px solid var(--ink)}
+nav a{flex:1;min-width:140px;text-align:center;padding:11px 8px;color:var(--ink);text-decoration:none;font-family:'IBM Plex Sans Thai',sans-serif;font-size:14px;border-right:1px solid var(--ln2)}
+nav a:last-child{border-right:none}
+nav a em{font-style:normal;font-family:var(--mono);color:var(--orange);margin-right:6px}
+nav a:hover{background:var(--bp3)}
+.announce{padding:12px 32px;border-bottom:2px solid var(--ink);background:repeating-linear-gradient(135deg,rgba(240,148,58,.16) 0 12px,transparent 12px 24px);font-weight:500}
+.announce b{font-family:var(--mono);color:var(--orange);font-weight:600;margin-right:10px;letter-spacing:2px;font-size:13px}
+section{padding:36px 32px 10px;border-bottom:1px dashed var(--ln2)}
+section:last-of-type{border-bottom:none}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:18px}
+.sh .no{font-family:var(--mono);font-size:13px;color:var(--bp);background:var(--orange);padding:2px 9px;font-weight:600}
+.sh h2{font-family:var(--head);font-size:28px;margin:0;font-weight:700;letter-spacing:.5px}
+.sh .dim{flex:1;height:1px;background:var(--ln2);position:relative;top:-6px}
+.sh .dim::before,.sh .dim::after{content:"";position:absolute;top:-5px;width:1px;height:11px;background:var(--ln2)}
+.sh .dim::after{right:0}
+.sh small{font-family:var(--mono);color:var(--mute);font-size:11px;letter-spacing:2px}
+.box{border:1.5px solid var(--ink);padding:22px 24px;margin:8px 0 22px;background:rgba(12,45,79,.6)}
+.box h3{font-family:var(--head);font-size:26px;margin:4px 0 4px}
+.label{display:inline-block;font-family:var(--mono),'IBM Plex Sans Thai',sans-serif;font-size:12.5px;letter-spacing:.5px;border:1px solid var(--cyan);color:var(--cyan);padding:1px 8px;margin:0 6px 4px 0}
+.label.o{border-color:var(--orange);color:var(--orange)}
+.meta{color:var(--mute);font-size:14.5px;margin-bottom:12px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+h4{font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--orange);margin:16px 0 6px;font-weight:600}
+ul{margin:0;padding-left:0;list-style:none}
+ul li{position:relative;padding-left:22px;margin:3px 0}
+ul li::before{content:"";position:absolute;left:2px;top:.72em;width:10px;height:1px;background:var(--cyan)}
+ul li::after{content:"";position:absolute;left:11px;top:calc(.72em - 3px);width:1px;height:7px;background:var(--cyan)}
+.btns{display:flex;flex-direction:column;gap:8px}
+.btn{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--ln2);padding:10px 14px;color:var(--ink);text-decoration:none;background:rgba(10,36,64,.7);transition:.15s}
+.btn small{font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:1.5px;white-space:nowrap}
+a.btn:hover{border-color:var(--orange);background:rgba(240,148,58,.12)}
+a.btn:hover small{color:var(--orange)}
+.next{border-left:3px solid var(--orange);padding:10px 16px;background:rgba(240,148,58,.08);font-size:15.5px}
+.next b{font-family:var(--mono);color:var(--orange);font-size:12px;letter-spacing:2px;margin-right:8px}
+/* ไม้บรรทัด 20 สัปดาห์ */
+.ruler{position:relative;margin:6px 0 30px;padding-top:34px}
+.ruler .scale{display:grid;grid-template-columns:repeat(20,1fr);border-top:2px solid var(--ink)}
+.ruler .t{position:relative;height:30px;border-left:1px solid var(--ln2);font-family:var(--mono);font-size:11px;color:var(--mute);padding:4px 0 0 4px}
+.ruler .t:nth-child(5n+1){border-left:1px solid var(--ink)}
+.ruler .t.s2{background:rgba(127,211,255,.06)}
+.ruler .t.done{color:var(--cyan)}
+.ruler .t.now{background:rgba(240,148,58,.25);color:var(--ink);font-weight:600}
+.ruler .t.camp::before{content:"";position:absolute;left:50%;top:-9px;width:12px;height:12px;background:var(--orange);transform:translateX(-50%) rotate(45deg)}
+.ruler .seasons{position:absolute;top:0;left:0;right:0;display:grid;grid-template-columns:12fr 8fr;font-family:var(--mono);font-size:11px;letter-spacing:1.5px}
+.ruler .seasons div{border-left:1px solid var(--ink);padding:0 8px;color:var(--mute)}
+.legend{font-family:var(--mono);font-size:11px;color:var(--mute);display:flex;gap:18px;flex-wrap:wrap;margin-top:-18px;margin-bottom:16px}
+.legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+/* ตาราง */
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{border:1px solid var(--ln2);padding:8px 10px;text-align:left;vertical-align:top}
+th{font-family:var(--mono);font-size:11.5px;letter-spacing:2px;color:var(--mute);font-weight:600;background:rgba(127,211,255,.06)}
+td.c,th.c{text-align:center;white-space:nowrap}
+td.n{font-family:var(--mono);color:var(--cyan);text-align:center}
+tr.now td{background:rgba(240,148,58,.18)}
+tr.now td:first-child{box-shadow:inset 3px 0 0 var(--orange)}
+tr.camp td:nth-child(3){color:var(--orange);font-weight:600}
+tr.done td{color:#7f9bb8}
+tfoot td{font-family:var(--mono);color:var(--orange);font-weight:600}
+.note{font-family:var(--mono);color:var(--mute);font-size:11.5px;letter-spacing:.5px;margin:8px 0 0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:20px}
+/* บทบาท: แผนผังชิ้นส่วน */
+.roles{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border:1.5px solid var(--ink)}
+.role{padding:16px;border-right:1px solid var(--ln2);position:relative}
+.role:last-child{border-right:none}
+.role .id{font-family:var(--mono);font-size:11px;color:var(--orange);letter-spacing:2px}
+.role b{display:block;font-family:var(--head);font-size:19px;margin:2px 0 6px;line-height:1.2}
+.role p{margin:0;font-size:14px;color:var(--mute)}
+.safety{counter-reset:s;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:20px}
+.safety div{border:1px dashed var(--ln2);padding:12px 14px;font-size:14.5px;counter-increment:s}
+.safety div::before{content:"S-0" counter(s);display:block;font-family:var(--mono);color:var(--orange);font-size:12px;letter-spacing:2px;margin-bottom:4px}
+/* ทีม: แผ่นแบบ */
+.dwg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.dw{border:1.5px solid var(--ink);display:flex;flex-direction:column;min-height:170px;background:rgba(12,45,79,.6)}
+.dw .art{flex:1;padding:14px;position:relative;background-image:linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);background-size:10px 10px}
+.dw .art strong{font-family:var(--head);font-size:42px;line-height:1;color:transparent;-webkit-text-stroke:1.2px var(--cyan)}
+.dw .art p{margin:8px 0 0;font-size:14.5px;line-height:1.45}
+.dw .foot{display:flex;justify-content:space-between;white-space:nowrap;gap:8px;border-top:1px solid var(--ink);font-family:var(--mono);font-size:11px;padding:6px 10px;color:var(--mute);letter-spacing:1px}
+.dw .foot a{color:var(--orange);text-decoration:none}
+/* คลังสื่อ */
+.reg{border:1.5px solid var(--ink);margin-bottom:14px}
+.reg>summary{list-style:none;cursor:pointer;display:flex;gap:14px;align-items:baseline;padding:10px 14px;background:rgba(127,211,255,.06)}
+.reg>summary::-webkit-details-marker{display:none}
+.reg>summary .wk{font-family:var(--mono);color:var(--orange);font-weight:600}
+.reg>summary .cnt{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--mute);letter-spacing:1px}
+.reg[open]>summary{border-bottom:1px solid var(--ln2)}
+.reg .row{display:grid;grid-template-columns:90px 1fr 70px;gap:10px;padding:8px 14px;border-bottom:1px dashed var(--ln2);text-decoration:none;color:var(--ink)}
+.reg .row:last-child{border-bottom:none}
+.reg a.row:hover{background:rgba(240,148,58,.1)}
+.reg .ty{font-family:var(--mono),'IBM Plex Sans Thai',sans-serif;font-size:12.5px;color:var(--cyan)}
+.reg .k{font-family:var(--mono);font-size:11px;color:var(--mute);text-align:right}
+.dw .pathtag{font-family:var(--mono);font-size:11px;color:var(--orange);letter-spacing:1.5px;margin-top:6px}
+.dw details{border-top:1px dashed var(--ln2);padding:6px 10px;font-size:13.5px}
+.dw details summary{cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:1px}
+.dw .nt{margin:6px 0;line-height:1.5}
+.dw .nt b{font-family:var(--mono);color:var(--orange);font-weight:600;font-size:11px}
+/* revision block */
+.rev{display:grid;grid-template-columns:110px 1fr 220px;border-top:2px solid var(--ink);font-size:13.5px}
+.rev div{padding:10px 14px;border-right:1px solid var(--ln2)}
+.rev div:last-child{border-right:none}
+.rev b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:2px;color:var(--mute);font-weight:400}
+@media (max-width:900px){
+  .tb{grid-template-columns:1fr}.tb-main{border-right:none;border-bottom:2px solid var(--ink)}
+  .cols,.two{grid-template-columns:1fr}
+  .roles{grid-template-columns:1fr 1fr}.role{border-bottom:1px solid var(--ln2)}
+  .safety{grid-template-columns:1fr 1fr}
+  .dwg{grid-template-columns:1fr 1fr}
+  .rev{grid-template-columns:1fr}.rev div{border-right:none;border-bottom:1px solid var(--ln2)}
+}
+@media (max-width:560px){
+  .reg .row{grid-template-columns:70px 1fr}.reg .k{display:none}
+  body{font-size:15.5px}
+  .sheet{margin:14px auto;padding:0 12px}
+  .tb-main{padding:22px 18px;gap:14px}.tb-main img{width:54px}
+  h1{font-size:34px}
+  .tag{font-size:10.5px;letter-spacing:1.5px}
+  section{padding:28px 16px 8px}.announce{padding:12px 16px}
+  .box{padding:18px 16px}
+  .roles,.safety,.dwg{grid-template-columns:1fr}
+  nav a{min-width:50%}
+  .ruler .t{font-size:9px;padding-left:2px}
+  .sh h2{font-size:23px}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+<div class="frame crop">
+
+  <div class="tb">
+    <div class="tb-main">
+      <img src="assets/crest.png" alt="ตราโรงเรียนพรตพิทยพยัต">
+      <div>
+        <div class="tag">INNOVATION MASTERCLASS · ENGINEERING &amp; ARCHITECTURE PROGRAM</div>
+        <h1>IS2 <span>THE PITCH</span></h1>
+        <p>รายวิชา IS2 การสื่อสารและการนำเสนอ (I30202) · ม.5/4 แผนการเรียนวิศวกรรม-สถาปัตยกรรม</p>
+      </div>
+    </div>
+    <div class="tb-grid">
+      <div><b>PROJECT</b><span>จากเค้าโครง สู่สิ่งประดิษฐ์</span></div>
+      <div><b>CLIENT</b><span>โรงเรียนพรตพิทยพยัต</span></div>
+      <div><b>TERM</b><span>ภาคเรียนที่ 2/2569</span></div>
+      <div><b>TEAMS</b><span>8 ทีม · 40 คน</span></div>
+      <div><b>MENTOR</b><span>ครูนพพล ภาณุสุวัฒน์</span></div>
+      <div><b>SHEET</b><span id="tbWeek">W01 / 20</span></div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#week"><em>01</em>สัปดาห์นี้</a>
+    <a href="#path"><em>02</em>เส้นทาง 20 สัปดาห์</a>
+    <a href="#archive"><em>03</em>คลังสื่อ</a>
+    <a href="#score"><em>04</em>คะแนน</a>
+    <a href="#team"><em>05</em>บทบาท</a>
+    <a href="#teams"><em>06</em>8 ทีม</a>
+  </nav>
+
+  <div class="announce" id="announceBox"><b>NOTICE</b><span id="announce"></span></div>
+
+  <section id="week">
+    <div class="sh"><span class="no">01</span><h2>สัปดาห์นี้</h2><span class="dim"></span><small>DETAIL A</small></div>
+    <div class="box crop" id="thisWeek"></div>
+    <div class="next" id="nextWeek"></div>
+  </section>
+
+  <section id="path">
+    <div class="sh"><span class="no">02</span><h2>เส้นทาง 20 สัปดาห์</h2><span class="dim"></span><small>TIMELINE · SCALE 1 : 1 WEEK</small></div>
+    <div class="ruler">
+      <div class="seasons"><div>SEASON 1 · ROAD TO THE STAGE</div><div>SEASON 2 · BEYOND THE STAGE</div></div>
+      <div class="scale" id="ruler"></div>
+    </div>
+    <div class="legend"><span><i style="background:rgba(240,148,58,.5)"></i>สัปดาห์ปัจจุบัน</span><span><i style="background:var(--orange);transform:rotate(45deg)"></i>Campaign</span><span><i style="background:var(--cyan)"></i>เรียนแล้ว</span></div>
+    <div class="tw"><table id="cal"><thead><tr><th class="c">WK</th><th>ช่วงวันที่ (ประมาณ)</th><th>หัวข้อ</th><th class="c">ช่องคะแนน</th></tr></thead><tbody></tbody></table></div>
+    <p class="note">* ช่วงวันที่เป็นค่าประมาณ จนกว่าตารางสอนภาคเรียนที่ 2 และวันงานเปิดบ้านวิชาการจะประกาศ</p>
+  </section>
+
+  <section id="archive">
+    <div class="sh"><span class="no">03</span><h2>คลังสื่อและใบงานรายสัปดาห์</h2><span class="dim"></span><small>DOCUMENT REGISTER</small></div>
+    <div id="archiveList"></div>
+  </section>
+
+  <section id="score">
+    <div class="sh"><span class="no">04</span><h2>BOM คะแนน 9 ช่องใน Prot Care</h2><span class="dim"></span><small>BILL OF MARKS</small></div>
+    <div class="tw"><table>
+      <thead><tr><th class="c">ITEM</th><th>งาน</th><th>ช่วงเวลา</th><th class="c">QTY</th></tr></thead>
+      <tbody>
+        <tr><td class="n">01</td><td>วางโครงร่างการเขียน (ใบงาน MC1–2 + เค้าโครง v2)</td><td>สัปดาห์ 2–3</td><td class="n">10</td></tr>
+        <tr><td class="n">02</td><td>ศึกษาวิธีการเขียนรายงาน (ใบงาน MC6 + ร่างบทที่ 3–4)</td><td>สัปดาห์ 7</td><td class="n">10</td></tr>
+        <tr><td class="n">03</td><td>การศึกษาค้นคว้าเชิงวิชาการ (Source Log + การ์ด C-M-T-S)</td><td>สัปดาห์ 4–5</td><td class="n">10</td></tr>
+        <tr><td class="n">04</td><td>รายงานฉบับสมบูรณ์</td><td>สัปดาห์ 18</td><td class="n">10</td></tr>
+        <tr><td class="n">05</td><td>นำเสนอข้อค้นพบ (Mid-Pitch + ต้นแบบ)</td><td>สัปดาห์ 8</td><td class="n">10</td></tr>
+        <tr><td class="n">06</td><td>สร้างสรรค์งานและถ่ายทอด (บอร์ด 3 พับ + เกมที่บูธ)</td><td>สัปดาห์ 9–11</td><td class="n">15</td></tr>
+        <tr><td class="n">07</td><td>เผยแพร่ผลงานสู่สาธารณะ (Portfolio + คลิป)</td><td>สัปดาห์ 16–17</td><td class="n">15</td></tr>
+        <tr><td class="n">08</td><td>การนำเสนอโครงงานที่บูธ</td><td>สัปดาห์ 12</td><td class="n">10</td></tr>
+        <tr><td class="n">09</td><td>ผลงานนวัตกรรม · กรรมการภายนอกประเมินในวันงานเปิดบ้าน</td><td>วันงานเปิดบ้าน</td><td class="n">10</td></tr>
+      </tbody>
+      <tfoot><tr><td></td><td colspan="2">TOTAL</td><td class="c">100</td></tr></tfoot>
+    </table></div>
+    <div class="two">
+      <div class="box crop" style="margin:0"><h4 style="margin-top:0">SPEC · ส่งครบ = ได้เต็ม</h4><ul>
+        <li>ช่อง 1–8 ส่งครบทุกองค์ประกอบ ได้เต็มช่องนั้น</li>
+        <li>ส่งย้อนหลังได้ถึงวันสุดท้ายก่อนตัดสินผล ไม่หักคะแนน</li>
+        <li>ครบ 90 คะแนน = เกรด 4 ไม่ว่าช่อง 9 จะได้เท่าใด</li>
+        <li>ไม่ส่งงานจนคะแนนไม่ถึงเกณฑ์ ได้ “ร” และแก้ตามระเบียบ</li>
+      </ul></div>
+      <div class="box crop" style="margin:0"><h4 style="margin-top:0">SPEC · งานเดี่ยวและงานกลุ่ม</h4><ul>
+        <li>ใบงาน Masterclass ทำรายบุคคล เขียนมือ ครูสแกนตรวจ</li>
+        <li>โครงงาน รายงาน บอร์ด Portfolio คะแนนเท่ากันทั้งกลุ่ม</li>
+        <li>ผลโหวต คะแนน Runway และ Rubric แสดงตามจริง ไม่มีผลต่อเกรด</li>
+        <li>ใช้ AI ได้ แต่ต้องเปิดเผยใน AI Log ท้ายรายงาน</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section id="team">
+    <div class="sh"><span class="no">05</span><h2>5 บทบาทในทีม</h2><span class="dim"></span><small>TEAM ASSEMBLY</small></div>
+    <div class="roles">
+      <div class="role"><span class="id">R-01</span><b>Project Lead</b><p>ผู้นำโครงการ / ผู้นำเสนอ · บทที่ 1 + บทพูดพิช · ส่ง Mission Log</p></div>
+      <div class="role"><span class="id">R-02</span><b>Engineer</b><p>สร้างชิ้นงาน ต่อวงจร เขียนโค้ด · Build Log + บทที่ 3</p></div>
+      <div class="role"><span class="id">R-03</span><b>Data Analyst</b><p>ออกแบบและบันทึกผลทดสอบ สถิติ กราฟ · บทที่ 4</p></div>
+      <div class="role"><span class="id">R-04</span><b>Researcher-Writer</b><p>สืบค้น อ้างอิง เรียบเรียง · บทที่ 2, 5 + AI Log</p></div>
+      <div class="role"><span class="id">R-05</span><b>Designer</b><p>ออกแบบบอร์ด 3 พับ สื่อนำเสนอ และเกมที่บูธ</p></div>
+    </div>
+    <h4 style="margin-top:26px">SAFETY NOTES · กติกาความปลอดภัยในการสร้างชิ้นงาน</h4>
+    <div class="safety" style="margin-top:8px">
+      <div>วางหัวแร้งบนขาตั้งทุกครั้ง</div>
+      <div>ใช้ปลั๊กพ่วงที่มีสวิตช์ตัดไฟ กลุ่มละไม่เกิน 1 ชุด</div>
+      <div>ถอดปลั๊กก่อนออกจากห้อง (Engineer รับผิดชอบ)</div>
+      <div>เปิดระบายอากาศขณะบัดกรี</div>
+      <div>เก็บกวาดพื้นที่ก่อนหมดคาบ 5 นาที</div>
+    </div>
+  </section>
+
+  <section id="teams">
+    <div class="sh"><span class="no">06</span><h2>8 ทีมของ ม.5/4</h2><span class="dim"></span><small>DRAWING INDEX</small></div>
+    <div class="dwg" id="teamGrid"></div>
+    <p class="note">* Mentor's Notes ระดับกลุ่ม (จุดเด่น / ต้องแก้ / ก้าวต่อไป) และหน้า Portfolio จะเพิ่มระหว่างภาคเรียน</p>
+  </section>
+
+  <section id="links">
+    <div class="sh"><span class="no">07</span><h2>ลิงก์ประจำรายวิชา</h2><span class="dim"></span><small>REFERENCES</small></div>
+    <div class="btns" id="linkList"></div>
+  </section>
+
+  <div class="rev">
+    <div><b>REV</b><span id="rev">A</span></div>
+    <div><b>NOTE</b>ประกาศและงานที่ต้องส่งแจ้งผ่าน LINE กลุ่มห้อง ม.5/4 · งานโรงเรียนมาตรฐานสากล โรงเรียนพรตพิทยพยัต</div>
+    <div><b>UPDATED</b><span id="updated"></span></div>
+  </div>
+
+</div>
+</div>
+
+<script src="data/site.js"></script>
+<script src="data/archive.js"></script>
+<script src="data/teams.js"></script>
+<script>
+(function () {
+  const D = window.IS2_SITE || {};
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  // รับเฉพาะลิงก์ https:// หรือไฟล์ภายใน .html / .pdf
+  const safe = u => { u = String(u || '').trim(); return (/^https:\/\//.test(u) || /^[A-Za-z0-9_\-\/]+\.(html|pdf)(#.*)?$/.test(u)) ? u : ''; };
+  const kind = u => /\.pdf/.test(u) ? 'PDF' : /^https:/.test(u) ? 'WEB APP' : 'OPEN';
+  const btn = x => {
+    const u = safe(x.link);
+    if (!u) return '<div class="btn">' + esc(x.text) + '</div>';
+    const ext = /^https:/.test(u) ? ' target="_blank" rel="noopener"' : '';
+    return '<a class="btn" href="' + esc(u) + '"' + ext + '><span>' + esc(x.text) + '</span><small>' + kind(u) + '</small></a>';
+  };
+  const $ = id => document.getElementById(id);
+  const pad = n => String(n).padStart(2, '0');
+
+  if (D.announce) $('announce').textContent = D.announce; else $('announceBox').style.display = 'none';
+  $('updated').textContent = D.updated || '';
+  $('tbWeek').textContent = 'W' + pad(D.week || 1) + ' / 20';
+  $('rev').textContent = 'W' + pad(D.week || 1);
+
+  const W = D.thisWeek || {};
+  const list = a => (a || []).map(x => '<li>' + esc(x) + '</li>').join('');
+  const tasks = (W.tasks || []).map(btn).join('');
+  const media = (W.media || []).map(btn).join('');
+  $('thisWeek').innerHTML =
+    '<span class="label">' + esc(W.label) + '</span>' + (W.unit ? '<span class="label o">' + esc(W.unit) + '</span>' : '') +
+    '<h3>' + esc(W.title) + '</h3>' +
+    '<div class="meta">' + (W.date ? esc(W.date) : 'วันและคาบที่เรียน: รอตารางสอนภาคเรียนที่ 2') + '</div>' +
+    '<div class="cols"><div><h4>OBJECTIVES · คาบนี้จะได้อะไร</h4><ul>' + list(W.goals) + '</ul>' +
+    (W.bring && W.bring.length ? '<h4>MATERIALS · เตรียมมาด้วย</h4><ul>' + list(W.bring) + '</ul>' : '') + '</div>' +
+    '<div>' + (tasks ? '<h4>DELIVERABLES · งานที่ต้องทำ / ส่ง</h4><div class="btns">' + tasks + '</div>' : '') +
+    (media ? '<h4>RESOURCES · สื่อการเรียน</h4><div class="btns">' + media + '</div>' : '') + '</div></div>';
+  if (D.nextWeek) $('nextWeek').innerHTML = '<b>NEXT</b>' + esc(D.nextWeek); else $('nextWeek').style.display = 'none';
+
+  const cal = D.calendar || [];
+  $('ruler').innerHTML = cal.map(r => {
+    const c = ['t', r.w > 12 ? 's2' : '', r.w === D.week ? 'now' : (r.w < D.week ? 'done' : ''), r.campaign ? 'camp' : ''].join(' ');
+    return '<div class="' + c + '" title="' + esc('สัปดาห์ ' + r.w + ' · ' + r.title) + '">' + esc(r.w) + '</div>';
+  }).join('');
+  $('cal').querySelector('tbody').innerHTML = cal.map(r => {
+    const cls = [r.w === D.week ? 'now' : (r.w < D.week ? 'done' : ''), r.campaign ? 'camp' : ''].join(' ').trim();
+    return '<tr class="' + cls + '"><td class="n">' + pad(r.w) + '</td><td>' + esc(r.dates) + '</td><td>' + esc(r.title) + '</td><td class="c">' + esc(r.slot || '–') + '</td></tr>';
+  }).join('');
+
+  const teams = window.IS2_TEAMS || D.teams || [];
+  $('teamGrid').innerHTML = teams.map((t, i) => {
+    const u = safe(t.portfolio);
+    const notes = (t.notes || []).map(n => '<div class="nt"><b>W' + pad(n.week || 0) + '</b> ' +
+      (n.strength ? 'จุดเด่น: ' + esc(n.strength) + ' ' : '') + (n.fix ? '· ต้องแก้: ' + esc(n.fix) + ' ' : '') + (n.next ? '· ก้าวต่อไป: ' + esc(n.next) : '') + '</div>').join('');
+    return '<div class="dw"><div class="art"><strong>' + esc(t.id) + '</strong><p>' + esc(t.name) + '</p>' +
+      (t.path ? '<div class="pathtag">PATH · ' + esc(t.path).toUpperCase() + '</div>' : '') + '</div>' +
+      (notes ? '<details><summary>MENTOR NOTES (' + t.notes.length + ')</summary>' + notes + '</details>' : '') +
+      '<div class="foot"><span>DWG-' + esc(t.id) + ' · ' + (i + 1) + '/8</span>' +
+      (u ? '<a href="' + esc(u) + '">PORTFOLIO</a>' : '<span>COMING SOON</span>') + '</div></div>';
+  }).join('');
+
+  const arc = (window.IS2_ARCHIVE || []).slice().sort((a, b) => b.week - a.week);
+  $('archiveList').innerHTML = arc.map(g => {
+    const rows = (g.items || []).map(x => {
+      const u = safe(x.link);
+      const inner = '<span class="ty">' + esc(x.type || '') + '</span><span>' + esc(x.text) + '</span><span class="k">' + (u ? kind(u) : '') + '</span>';
+      return u ? '<a class="row" href="' + esc(u) + '"' + (/^https:/.test(u) ? ' target="_blank" rel="noopener"' : '') + '>' + inner + '</a>' : '<div class="row">' + inner + '</div>';
+    }).join('');
+    return '<details class="reg"' + (g.week === D.week ? ' open' : '') + '><summary><span class="wk">W' + pad(g.week) + '</span><span>' + esc(g.title || '') + '</span><span class="cnt">' + (g.items || []).length + ' ITEMS</span></summary>' + rows + '</details>';
+  }).join('') || '<p class="note">ยังไม่มีรายการ</p>';
+
+  $('linkList').innerHTML = (D.links || []).map(btn).join('') || '<p class="note">ยังไม่มีลิงก์</p>';
+})();
+</script>
+</body>
+</html>
