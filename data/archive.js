@@ -22,4 +22,15 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 2,
+    title: "MC1 Project Health Check",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC1 Project Health Check",             link: "slides/w02-health-check.html" },
+      { type: "ใบงาน",  text: "ใบงาน W02 Project Health Check (รายบุคคล)",   link: "docs/w02-health-check.pdf" },
+      { type: "ใบงาน",  text: "แผนที่ช่องว่าง Gap Map (กลุ่ม)",              link: "docs/w02-gap-map.pdf" },
+      { type: "สื่อ",   text: "แผ่นสรุปโครงสร้างรายงานโครงงาน 5 บท",         link: "docs/w02-report-structure.pdf" },
+    ],
+  },
+
 ];
