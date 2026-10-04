@@ -45,4 +45,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 4,
+    title: "MC3 Source Detective",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC3 Source Detective",                 link: "slides/w04-source-detective.html" },
+      { type: "ใบงาน",  text: "ใบงาน W04 Source Detective (รายบุคคล)",       link: "docs/w04-source-detective.pdf" },
+      { type: "ใบงาน",  text: "Source Log และแผนบทที่ 2 (กลุ่ม)",            link: "docs/w04-source-log-chapter2.pdf" },
+      { type: "สื่อ",   text: "การ์ดนักสืบ 5 เบาะแส และสูตรอ้างอิง APA",     link: "docs/w04-detective-apa-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: เกมนักสืบ และ Source Log ของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
