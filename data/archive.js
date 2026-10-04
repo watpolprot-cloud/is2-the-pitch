@@ -33,4 +33,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 3,
+    title: "MC2 Restore – Upgrade – Pivot",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC2 Restore – Upgrade – Pivot",        link: "slides/w03-restore-upgrade-pivot.html" },
+      { type: "ใบงาน",  text: "ใบงาน W03 Restore – Upgrade – Pivot (รายบุคคล)", link: "docs/w03-path-worksheet.pdf" },
+      { type: "ใบงาน",  text: "เค้าโครงโครงงาน v2 (กลุ่ม)",                 link: "docs/w03-outline-v2.pdf" },
+      { type: "ใบงาน",  text: "รายการวัสดุ (BOM) และแผนการสร้าง (กลุ่ม)",    link: "docs/w03-bom-build-plan.pdf" },
+      { type: "สื่อ",   text: "การ์ด 3 เส้นทาง Restore – Upgrade – Pivot",   link: "docs/w03-path-cards.pdf" },
+    ],
+  },
+
 ];
