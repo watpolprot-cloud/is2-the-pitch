@@ -57,4 +57,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 5,
+    title: "MC4 PROVE IT!",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC4 PROVE IT!",                       link: "slides/w05-prove-it.html" },
+      { type: "ใบงาน",  text: "ใบงาน W05 PROVE IT! Test Plan Card (รายบุคคล)", link: "docs/w05-prove-it.pdf" },
+      { type: "ใบงาน",  text: "การ์ด C-M-T-S ของกลุ่ม และแผนบทที่ 3 (กลุ่ม)", link: "docs/w05-cmts-chapter3.pdf" },
+      { type: "สื่อ",   text: "การ์ด C-M-T-S และตัวตรวจ 8 ข้อ",              link: "docs/w05-cmts-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Claim Buster และการ์ด C-M-T-S ของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
