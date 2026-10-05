@@ -69,4 +69,17 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 6,
+    title: "MC5 Data Logger",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC5 Data Logger",                     link: "slides/w06-data-logger.html" },
+      { type: "ใบงาน",  text: "ใบงาน W06 Data Logger เส้นทางข้อมูลของฉัน (รายบุคคล)", link: "docs/w06-data-logger.pdf" },
+      { type: "ใบงาน",  text: "แผนเก็บข้อมูลและ Build Log (กลุ่ม)",          link: "docs/w06-logger-build-log.pdf" },
+      { type: "สื่อ",   text: "แผ่นขั้นตอน ESP32 Data Logger และการแก้ปัญหา", link: "docs/w06-esp32-steps.pdf" },
+      { type: "สื่อ",   text: "โค้ด ESP32 Data Logger (คัดลอก/ดาวน์โหลด)",    link: "media/w06-esp32-code.html" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Data Logger ของกลุ่ม (รหัสอุปกรณ์ กราฟสด บันทึกมือ)", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];

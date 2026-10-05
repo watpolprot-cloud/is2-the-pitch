@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>W06 โค้ด ESP32 Data Logger</title>
+<link rel="icon" href="../assets/crest.png">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bp:#0c2d4f;--bp2:#0a2440;--ln:rgba(173,216,255,.14);--ln2:rgba(173,216,255,.32);--ink:#e8f2fc;--mute:#9db9d6;--cyan:#7fd3ff;--orange:#F0943A;--mono:'IBM Plex Mono',monospace;--head:'Chakra Petch','IBM Plex Sans Thai',sans-serif}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bp);color:var(--ink);font-family:'IBM Plex Sans Thai',sans-serif;font-size:16px;line-height:1.65;
+background-image:linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);background-size:24px 24px}
+main{max-width:980px;margin:0 auto;padding:20px 16px 60px}
+a{color:var(--cyan)}
+.back{font-family:var(--mono);font-size:13px;text-decoration:none}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:3px;color:var(--orange);margin-top:18px}
+h1{font-family:var(--head);font-size:clamp(30px,6vw,46px);line-height:1.1;margin:6px 0 10px;letter-spacing:1px}
+h2{font-family:var(--head);font-size:22px;margin:26px 0 8px;border-bottom:1px solid var(--ln2);padding-bottom:4px}
+ol,ul{padding-left:22px;margin:6px 0}
+li{margin:3px 0}
+.box{border:1px solid var(--ln2);background:var(--bp2);padding:12px 16px;margin:10px 0}
+.warn{border-color:var(--orange)}
+.warn b{color:var(--orange)}
+.bar{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+button{font:inherit;font-size:15px;background:var(--orange);color:#1b1206;border:0;padding:10px 16px;cursor:pointer;font-weight:600}
+button.g{background:transparent;color:var(--cyan);border:1px solid var(--cyan)}
+#msg{font-family:var(--mono);font-size:13px;color:var(--cyan);align-self:center}
+pre{margin:0;background:#06192d;border:1px solid var(--ln2);padding:14px;overflow:auto;font-family:var(--mono);font-size:13px;line-height:1.55;white-space:pre;max-height:70vh}
+code{font-family:var(--mono);color:var(--cyan)}
+table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{border:1px solid var(--ln2);padding:6px 8px;text-align:left;vertical-align:top}
+th{font-family:var(--mono);font-size:12px;letter-spacing:1px;color:var(--mute);background:rgba(127,211,255,.06)}
+.tw{overflow-x:auto}
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="../index.html">กลับหน้าหลักรายวิชา</a>
+<div class="tag">W06 · MC5 DATA LOGGER</div>
+<h1>โค้ด ESP32 ส่งข้อมูลเข้า Google Sheets</h1>
+<p>ESP32 อ่านค่าเซนเซอร์แล้วส่งไปที่เว็บแอปในคาบพร้อมรหัสอุปกรณ์ของกลุ่ม ค่าทุกครั้งถูกบันทึกพร้อมเวลา และขึ้นกราฟในเว็บแอป เมนู <b>Data Logger ของกลุ่ม</b></p>
+
+<h2>ขั้นตอน</h2>
+<ol>
+<li>ในเว็บแอป เมนู Data Logger ของกลุ่ม: Data Analyst ตั้งชื่อตัวแปร หน่วย และรอบทดสอบ แล้วกด “เปิดลิงก์ทดสอบ” ต้องเห็น <code>"ok":true</code></li>
+<li>ติดตั้ง Arduino IDE และบอร์ด ESP32 (Boards Manager ค้นหา <code>esp32</code> ของ Espressif Systems)</li>
+<li>กด “คัดลอกโค้ด” ด้านล่าง วางใน Arduino IDE แก้ <code>WIFI_SSID</code> <code>WIFI_PASS</code> <code>DEVICE_KEY</code> และฟังก์ชัน <code>readSensors()</code></li>
+<li>Tools &gt; Board: ESP32 Dev Module · Port: COM ของบอร์ด · กด Upload</li>
+<li>เปิด Serial Monitor ที่ 115200 ต้องเห็น <code>HTTP 200</code> และ <code>"ok":true</code> แล้วดูกราฟในเว็บแอป</li>
+</ol>
+
+<div class="box warn"><b>ความปลอดภัย</b> ขา GPIO ของ ESP32 รับได้ไม่เกิน 3.3 V ห้ามต่อแบตเตอรี่ แผงโซลาร์ หรือไฟ 5 V เข้าขาโดยตรง ใช้วงจรแบ่งแรงดัน · ถอดสาย USB ก่อนแก้วงจร · ปั๊มและมอเตอร์ใช้แหล่งจ่ายแยก</div>
+
+<h2>โค้ดตัวอย่าง</h2>
+<div class="bar"><button id="copy">คัดลอกโค้ด</button><button class="g" id="dl">ดาวน์โหลด IS2_DataLogger.ino</button><span id="msg"></span></div>
+<pre id="code">/*
+  IS2 THE PITCH · MC5 Data Logger
+  ESP32 -&gt; Wi-Fi -&gt; Apps Script (เว็บแอปในคาบ) -&gt; Google Sheets (แท็บ Logger) -&gt; กราฟในเว็บแอป
+
+  ขั้นตอน
+  1) แก้ 3 บรรทัดในส่วน "ตั้งค่า" (Wi-Fi, รหัส Wi-Fi, รหัสอุปกรณ์ของกลุ่ม)
+  2) แก้ฟังก์ชัน readSensors() ให้อ่านเซนเซอร์ของกลุ่ม ชื่อตัวแปรต้องตรงกับที่ตั้งในเว็บแอป (ไม่เกิน 4 ค่า)
+  3) Tools &gt; Board: ESP32 Dev Module · Port: COM ของบอร์ด · กด Upload
+  4) เปิด Serial Monitor ที่ 115200 ต้องเห็น HTTP 200 และ "ok":true แล้วดูกราฟในเว็บแอป &gt; Data Logger ของกลุ่ม
+
+  ข้อควรระวัง: ESP32 ใช้ Wi-Fi 2.4 GHz เท่านั้น · Wi-Fi ที่ต้องล็อกอินผ่านหน้าเว็บใช้ไม่ได้ ให้ใช้ฮอตสปอตมือถือ
+               ขา GPIO รับแรงดันได้ไม่เกิน 3.3 V ห้ามต่อแบตเตอรี่ แผงโซลาร์ หรือ 5 V เข้าขาโดยตรง ใช้วงจรแบ่งแรงดัน
+*/
+#include &lt;WiFi.h&gt;
+#include &lt;WiFiClientSecure.h&gt;
+#include &lt;HTTPClient.h&gt;
+
+// ===== ตั้งค่า =====
+const char* WIFI_SSID  = "ชื่อ Wi-Fi";
+const char* WIFI_PASS  = "รหัส Wi-Fi";
+const char* DEVICE_KEY = "XXXXXX";   // รหัสอุปกรณ์ 6 ตัวของกลุ่ม ดูในเว็บแอป &gt; Data Logger ของกลุ่ม
+const char* EXEC_URL   = "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec";
+const unsigned long SEND_EVERY_MS = 10000;   // ส่งทุก 10 วินาที (ทดสอบในคาบ) · เก็บข้อมูลยาวหลายชั่วโมงให้ใช้ 60000
+
+String query;   // ค่าที่จะส่งในรอบนี้
+uint32_t bootId = 0;            // สุ่มทุกครั้งที่เปิดเครื่อง ใช้กับ seq กันบันทึกซ้ำ
+unsigned long sendCount = 0;
+
+// เพิ่มค่า 1 ตัวแปร: ชื่อภาษาอังกฤษ ไม่มีเว้นวรรค ตรงกับในเว็บแอป
+void addValue(const char* name, float value, int digits = 2) {
+  if (isnan(value)) return;   // อ่านเซนเซอร์ไม่ได้ ไม่ส่งค่านี้
+  query += "&amp;";
+  query += name;
+  query += "=";
+  query += String(value, digits);
+}
+
+// ===== อ่านเซนเซอร์ของกลุ่ม (แก้ตรงนี้) =====
+const int ANALOG_PIN = 34;     // ตัวอย่างที่ 1: เซนเซอร์แบบแอนะล็อก เช่น ความชื้นดิน แสง (ค่า 0–4095)
+const int TRIG_PIN = 5;        // ตัวอย่างที่ 2: HC-SR04 วัดระยะ (ไฟเลี้ยง 5 V ต้องแบ่งแรงดันขา ECHO ก่อนเข้า ESP32)
+const int ECHO_PIN = 18;
+
+float readDistanceCm() {
+  digitalWrite(TRIG_PIN, LOW);  delayMicroseconds(2);
+  digitalWrite(TRIG_PIN, HIGH); delayMicroseconds(10);
+  digitalWrite(TRIG_PIN, LOW);
+  unsigned long us = pulseIn(ECHO_PIN, HIGH, 30000);   // รอไม่เกิน 30 ms
+  if (us == 0) return NAN;
+  return us * 0.0343 / 2.0;
+}
+
+void readSensors() {
+  addValue("raw34", analogRead(ANALOG_PIN), 0);
+  addValue("distance", readDistanceCm(), 1);
+  // ตัวอย่างอื่น ลบ // หน้าบรรทัดเมื่อใช้ (เพิ่ม #include และตั้งค่าเซนเซอร์ด้านบนก่อน)
+  // addValue("temp", dht.readTemperature(), 1);       // DHT22 ต้องติดตั้งไลบรารี DHT sensor library
+  // addValue("voltage", analogReadMilliVolts(35) * 11 / 1000.0, 2);   // แบ่งแรงดัน 100k : 10k (คูณ 11)
+}
+
+// ===== ส่วนที่ไม่ต้องแก้ =====
+void connectWiFi() {
+  if (WiFi.status() == WL_CONNECTED) return;
+  Serial.print("Wi-Fi ");
+  WiFi.mode(WIFI_STA);
+  WiFi.begin(WIFI_SSID, WIFI_PASS);
+  for (int i = 0; i &lt; 40 &amp;&amp; WiFi.status() != WL_CONNECTED; i++) {
+    delay(500);
+    Serial.print(".");
+  }
+  if (WiFi.status() == WL_CONNECTED) Serial.println(" OK " + WiFi.localIP().toString());
+  else Serial.println(" FAIL (check SSID/password, 2.4 GHz)");
+}
+
+void sendData() {
+  query = "";
+  readSensors();
+  if (query.length() == 0) {
+    Serial.println("no sensor value");
+    return;
+  }
+  sendCount++;
+  String url = String(EXEC_URL) + "?dev=" + DEVICE_KEY + "&amp;src=esp32&amp;seq=" + String(bootId, HEX) + "-" + String(sendCount) + query;
+  Serial.println(url);
+  WiFiClientSecure client;
+  client.setInsecure();                                  // ไม่ตรวจใบรับรอง (ใช้ในห้องเรียนเท่านั้น)
+  HTTPClient http;
+  http.setFollowRedirects(HTTPC_STRICT_FOLLOW_REDIRECTS); // Apps Script ตอบกลับด้วยการ redirect
+  http.setTimeout(15000);
+  if (!http.begin(client, url)) {
+    Serial.println("http.begin failed");
+    return;
+  }
+  int code = http.GET();
+  if (code &gt; 0) Serial.printf("HTTP %d %s\n", code, http.getString().c_str());
+  else Serial.printf("HTTP error %s\n", http.errorToString(code).c_str());
+  http.end();
+}
+
+unsigned long lastSend = 0;
+bool first = true;
+
+void setup() {
+  Serial.begin(115200);
+  delay(500);
+  bootId = esp_random();
+  pinMode(TRIG_PIN, OUTPUT);
+  pinMode(ECHO_PIN, INPUT);
+  connectWiFi();
+}
+
+void loop() {
+  if (first || millis() - lastSend &gt;= SEND_EVERY_MS) {
+    first = false;
+    lastSend = millis();
+    connectWiFi();
+    if (WiFi.status() == WL_CONNECTED) sendData();
+  }
+}
+</pre>
+
+<h2>ติดปัญหา</h2>
+<div class="tw"><table>
+<tr><th>Serial Monitor แสดง</th><th>แก้อย่างไร</th></tr>
+<tr><td>Wi-Fi ...... FAIL</td><td>ชื่อหรือรหัส Wi-Fi ผิด · ESP32 ใช้ได้เฉพาะ 2.4 GHz · Wi-Fi ที่ต้องล็อกอินผ่านหน้าเว็บใช้ไม่ได้ ให้ใช้ฮอตสปอตมือถือ</td></tr>
+<tr><td>HTTP error</td><td>อินเทอร์เน็ตหลุด หรือ EXEC_URL ไม่ครบ คัดลอกลิงก์จากหน้า Data Logger ใหม่</td></tr>
+<tr><td>"ok":false รหัสอุปกรณ์ไม่ถูกต้อง</td><td>DEVICE_KEY ไม่ตรงกับหน้า Data Logger ของกลุ่ม</td></tr>
+<tr><td>"ok":false ส่งถี่เกินไป</td><td>เพิ่ม SEND_EVERY_MS เป็นอย่างน้อย 10000</td></tr>
+<tr><td>"ok":false ไม่มีค่าตัวเลข</td><td>เซนเซอร์อ่านไม่ได้ทุกค่า (NAN) ตรวจสายและไลบรารี</td></tr>
+<tr><td>ค่าเป็น 0 หรือ 4095 ตลอด</td><td>ต่อผิดขา · ใช้ขาแอนะล็อก 32–39 (ขากลุ่ม ADC2 ใช้ไม่ได้ตอนเปิด Wi-Fi)</td></tr>
+<tr><td>Upload ไม่ได้</td><td>เลือก Board/Port ผิด · สาย USB ชาร์จอย่างเดียว · กดปุ่ม BOOT ค้างตอนเริ่ม Upload</td></tr>
+</table></div>
+<p style="color:var(--mute);font-size:14px">ข้อมูลจากชิ้นงานคือหลักฐานบทที่ 4 ห้ามแก้หรือแต่งตัวเลข · ระหว่างลองระบบใช้รอบ “ลองระบบ” แล้วลบได้ในเว็บแอป</p>
+</main>
+<script>
+const code = document.getElementById('code').textContent;
+const say = t => { document.getElementById('msg').textContent = t; };
+document.getElementById('copy').onclick = () => {
+  const sel = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById('code')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); say('เลือกโค้ดแล้ว กด Ctrl+C'); };
+  try { navigator.clipboard.writeText(code).then(() => say('คัดลอกแล้ว วางใน Arduino IDE ได้เลย'), sel); } catch (e) { sel(); }
+};
+document.getElementById('dl').onclick = () => {
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob([code], { type: 'text/plain' }));
+  a.download = 'IS2_DataLogger.ino'; a.click();
+  say('สร้างโฟลเดอร์ชื่อ IS2_DataLogger แล้ววางไฟล์ไว้ข้างใน');
+};
+</script>
+</body>
+</html>
