@@ -82,4 +82,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 7,
+    title: "MC6 Numbers Talk",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC6 Numbers Talk",                    link: "slides/w07-numbers-talk.html" },
+      { type: "ใบงาน",  text: "ใบงาน W07 Numbers Talk ตัวเลขที่กรรมการเชื่อ (รายบุคคล)", link: "docs/w07-numbers-talk.pdf" },
+      { type: "ใบงาน",  text: "ร่างบทที่ 3–4 และผลทดสอบรอบแรก (กลุ่ม)",      link: "docs/w07-chapter3-4-draft.pdf" },
+      { type: "สื่อ",   text: "การ์ดสูตร Numbers Talk สถิติพื้นฐาน ตาราง กราฟ", link: "docs/w07-stats-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Graph Makeover และ Stats Lab คำนวณสถิติของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
