@@ -94,4 +94,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 8,
+    title: "Campaign 1 Mid-Pitch Runway",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ Campaign 1 Mid-Pitch Runway",          link: "slides/w08-mid-pitch.html" },
+      { type: "ใบงาน",  text: "ใบงาน W08 Mid-Pitch Runway พิช 3 นาทีของฉัน (รายบุคคล)", link: "docs/w08-mid-pitch.pdf" },
+      { type: "ใบงาน",  text: "แผนพิช 3 นาที และตรวจความพร้อมต้นแบบ (กลุ่ม)", link: "docs/w08-pitch-plan.pdf" },
+      { type: "สื่อ",   text: "การ์ด Pitch 3 นาที และเกณฑ์ Mid-Pitch",       link: "docs/w08-pitch-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Pitch Card ของกลุ่ม และประเมินเพื่อน Mid-Pitch", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
