@@ -106,4 +106,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 9,
+    title: "MC7 Report Doctor & Board Design",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC7 Report Doctor & Board Design",      link: "slides/w09-report-doctor.html" },
+      { type: "ใบงาน",  text: "ใบงาน W09 Report Doctor และออกแบบบอร์ด 3 พับ (รายบุคคล)", link: "docs/w09-report-doctor.pdf" },
+      { type: "ใบงาน",  text: "ร่างบทที่ 4–5 และแผนบอร์ด 3 พับ (กลุ่ม)",      link: "docs/w09-chapter4-5-board.pdf" },
+      { type: "สื่อ",   text: "การ์ด Report Doctor บทที่ 4–5 และแม่แบบบอร์ด 3 พับ", link: "docs/w09-doctor-board-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Report Doctor, Board Planner และแบบสำรวจความพึงพอใจนำร่อง", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
