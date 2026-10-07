@@ -118,4 +118,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 10,
+    title: "Build & Write Sprint",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ Build & Write Sprint",                   link: "slides/w10-build-write-sprint.html" },
+      { type: "ใบงาน",  text: "ใบงาน W10 Sprint Card ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w10-sprint-card.pdf" },
+      { type: "ใบงาน",  text: "แผน Sprint และรายการตรวจความพร้อมสัปดาห์ที่ 11 (กลุ่ม)", link: "docs/w10-sprint-plan.pdf" },
+      { type: "สื่อ",   text: "การ์ด Sprint และคู่มือผลิตบอร์ดจริง",          link: "docs/w10-sprint-board-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Sprint Board งานก่อนสัปดาห์ที่ 11 ของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
