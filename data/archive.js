@@ -142,4 +142,17 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 12,
+    title: "Campaign 2 Final Walk",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ Campaign 2 Final Walk",                  link: "slides/w12-final-walk.html" },
+      { type: "ใบงาน",  text: "ใบงาน W12 Final Walk Log (รายบุคคล · หลักฐานช่องคะแนนที่ 8)", link: "docs/w12-final-walk-log.pdf" },
+      { type: "ใบงาน",  text: "แผนวันงานเปิดบ้าน และบันทึกบูธของกลุ่ม (กลุ่ม)", link: "docs/w12-booth-day-plan.pdf" },
+      { type: "สื่อ",   text: "การ์ด Final Walk และ Booth Passport",          link: "docs/w12-final-walk-card.pdf" },
+      { type: "สื่อ",   text: "Booth Passport กระดาษ สำหรับผู้เยี่ยมชม (4 ใบต่อ A4)", link: "docs/w12-booth-passport-paper.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Final Walk บันทึกที่บูธ และ Booth Passport", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
