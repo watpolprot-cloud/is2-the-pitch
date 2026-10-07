@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>W16 ตัวอย่างหน้า Portfolio · IS2 THE PITCH</title>
+<link rel="icon" href="../assets/crest.png">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../teams/portfolio.css">
+<style>.sample{border:1px dashed var(--orange);color:var(--orange);font-family:var(--mono);font-size:12.5px;letter-spacing:1px;padding:8px 12px;margin:0 0 18px}</style>
+</head>
+<body>
+<div class="sheet">
+<a class="back" href="../index.html">กลับหน้าหลักรายวิชา</a>
+<div class="sample">ตัวอย่างหน้า Portfolio (ข้อมูลสมมติ ไม่ใช่โครงงานจริง) · หน้า Portfolio ของแต่ละทีมจะมีโครงแบบนี้ หลังครูตรวจและอนุมัติในเว็บแอป</div>
+<div class="frame" id="pf"></div>
+</div>
+<script>window.PF_SAMPLE = { id: "ตัวอย่าง", name: "กล่องเตือนลืมของ", path: "Upgrade",
+  pf: {
+    tag: "กล่องที่เตือนให้หยิบของจำเป็นก่อนออกจากบ้าน",
+    prob: "นักเรียนห้องตัวอย่างร้อยละ 62 เคยลืมของจำเป็น เช่น บัตรนักเรียน กุญแจ หรือยา อย่างน้อยสัปดาห์ละ 1 ครั้ง (สำรวจ 40 คน)",
+    how: "เซนเซอร์แม่เหล็กที่ประตูรู้ว่ามีคนกำลังออกจากบ้าน ESP32 อ่านค่าเซนเซอร์น้ำหนักใต้ช่องเก็บของ ถ้าของยังอยู่ในกล่อง จะส่งเสียงและไฟสีส้มเตือนจนกว่าจะหยิบของ",
+    proof: "ทดสอบเปิดประตูขณะมีของในกล่อง 30 ครั้ง แจ้งเตือนถูกต้อง 28 ครั้ง (ร้อยละ 93.33) ผ่านเกณฑ์ไม่น้อยกว่าร้อยละ 90",
+    voice: "ผู้ประเมินจากงานเปิดบ้านวิชาการ 41 คน พึงพอใจโดยรวมระดับมาก (x̄ = 4.21) · ผู้ปกครองแนะนำให้แจ้งเตือนผ่านมือถือ",
+    next: "เพิ่มการแจ้งเตือนผ่านมือถือ และทดลองใช้ที่บ้านของสมาชิก 2 สัปดาห์",
+    clip: "",
+    ai: "ใช้ Canva AI ลบพื้นหลังภาพชิ้นงาน",
+    updated: "ตัวอย่าง",
+    photos: [ { src: "", cap: "กล่องเตือนลืมของขณะแจ้งเตือนเมื่อเปิดประตู" }, { src: "", cap: "วงจร ESP32 และเซนเซอร์น้ำหนักภายในกล่อง (แผนภาพที่ทีมวาดเอง)" } ],
+    team: [ { name: "สมาชิก 1", role: "Project Lead" }, { name: "สมาชิก 2", role: "Engineer" }, { name: "สมาชิก 3", role: "Data Analyst" },
+            { name: "สมาชิก 4", role: "Researcher-Writer" }, { name: "สมาชิก 5", role: "Designer" } ]
+  } };</script>
+<script src="../teams/portfolio.js"></script>
+</body>
+</html>

@@ -191,4 +191,17 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 16,
+    title: "MC11 Digital Portfolio",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC11 Digital Portfolio",                 link: "slides/w16-digital-portfolio.html" },
+      { type: "ใบงาน",  text: "ใบงาน W16 Portfolio ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w16-portfolio-worksheet.pdf" },
+      { type: "ใบงาน",  text: "แผนหน้า Portfolio และสตอรีบอร์ดคลิป 60 วินาที (กลุ่ม · ช่องคะแนนที่ 7)", link: "docs/w16-portfolio-plan.pdf" },
+      { type: "สื่อ",   text: "การ์ด Digital Portfolio และคลิป 60 วินาที",    link: "docs/w16-portfolio-card.pdf" },
+      { type: "สื่อ",   text: "ตัวอย่างหน้า Portfolio (ข้อมูลสมมติ)",          link: "media/w16-portfolio-sample.html" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Portfolio หน้า Portfolio ภาพชิ้นงาน และสตอรีบอร์ดคลิป", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
