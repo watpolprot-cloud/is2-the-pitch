@@ -179,4 +179,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 15,
+    title: "MC10 Final Report Lab 2",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC10 Final Report Lab 2",                link: "slides/w15-final-report-lab-2.html" },
+      { type: "ใบงาน",  text: "ใบงาน W15 Final Lab ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w15-final-lab.pdf" },
+      { type: "ใบงาน",  text: "บทที่ 5 บทคัดย่อ และ AI Log ของกลุ่ม (กลุ่ม)", link: "docs/w15-chapter5-abstract.pdf" },
+      { type: "สื่อ",   text: "การ์ด Final Lab · ปิดเล่มรายงาน v2",            link: "docs/w15-final-lab-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Final Lab บทที่ 5 บทคัดย่อ AI Log และบรรณานุกรม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
