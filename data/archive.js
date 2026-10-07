@@ -130,4 +130,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 11,
+    title: "MC8 Booth Experience & Judge Roulette",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC8 Booth Experience & Judge Roulette",  link: "slides/w11-booth-judge.html" },
+      { type: "ใบงาน",  text: "ใบงาน W11 Judge Prep และบทบาทที่บูธ (รายบุคคล · ไม่มีคะแนน)", link: "docs/w11-judge-prep.pdf" },
+      { type: "ใบงาน",  text: "แผนเกมที่บูธ และรายการตรวจรับช่องคะแนนที่ 6 (กลุ่ม)", link: "docs/w11-booth-game-plan.pdf" },
+      { type: "สื่อ",   text: "การ์ด Booth Experience และ Judge Roulette",   link: "docs/w11-booth-judge-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Booth Game Planner, Judge Prep และ Booth Check", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
