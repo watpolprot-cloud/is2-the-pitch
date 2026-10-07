@@ -167,4 +167,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 14,
+    title: "MC10 Final Report Lab 1",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC10 Final Report Lab 1",                link: "slides/w14-final-report-lab.html" },
+      { type: "ใบงาน",  text: "ใบงาน W14 Report Lab ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w14-report-lab.pdf" },
+      { type: "ใบงาน",  text: "รายการตรวจรายงาน v2 และเส้นด้ายของกลุ่ม (กลุ่ม)", link: "docs/w14-report-checklist.pdf" },
+      { type: "สื่อ",   text: "การ์ด Report Lab · เส้นด้ายเดียวกัน",           link: "docs/w14-golden-thread-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Report Lab เส้นด้ายและรายการตรวจรายงาน v2", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
