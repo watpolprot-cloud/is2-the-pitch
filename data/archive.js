@@ -155,4 +155,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 13,
+    title: "MC9 After the Show",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC9 After the Show",                      link: "slides/w13-after-the-show.html" },
+      { type: "ใบงาน",  text: "ใบงาน W13 After Action Review ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w13-after-action-review.pdf" },
+      { type: "ใบงาน",  text: "แผนปรับรายงาน v2 จากข้อมูลงานเปิดบ้าน (กลุ่ม)", link: "docs/w13-report-v2-plan.pdf" },
+      { type: "สื่อ",   text: "การ์ด After the Show และ Insight Check",       link: "docs/w13-after-show-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: After the Show ข้อมูลวันงาน และ After Action Review ของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
