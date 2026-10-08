@@ -216,4 +216,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 18,
+    title: "Campaign 3 Final Report",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ Campaign 3 Final Report",                link: "slides/w18-final-report.html" },
+      { type: "ใบงาน",  text: "ใบงาน W18 Final Check ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w18-final-check.pdf" },
+      { type: "ใบงาน",  text: "แบบส่งรายงาน v2 และ Cross-Check (กลุ่ม · ช่องคะแนนที่ 4)", link: "docs/w18-report-submit.pdf" },
+      { type: "สื่อ",   text: "การ์ด Final Gate 5 ด่าน ก่อนกดส่งรายงาน v2",   link: "docs/w18-final-gate-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Final Report ส่งรายงาน v2 ของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
