@@ -228,4 +228,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 19,
+    title: "Season Finale",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ Season Finale",                          link: "slides/w19-season-finale.html" },
+      { type: "ใบงาน",  text: "ใบงาน W19 Season Review ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w19-season-review.pdf" },
+      { type: "ใบงาน",  text: "Season Review และชุดพร้อมแข่ง (กลุ่ม · ไม่มีคะแนน · ชุดพร้อมแข่งสมัครใจ)", link: "docs/w19-season-kit.pdf" },
+      { type: "สื่อ",   text: "การ์ด Season Finale สะท้อนคิดและชุดพร้อมแข่ง", link: "docs/w19-season-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Season Review สะท้อนคิดทั้งภาคของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
