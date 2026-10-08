@@ -5,7 +5,8 @@
    ข้อมูลหน้า Portfolio อยู่ใน data/teams.js ที่ช่อง pf ของแต่ละทีม (เพิ่มหลังครูอนุมัติในเว็บแอปเท่านั้น)
      pf: { tag, prob, how, proof, voice, next, clip, ai, updated,
            photos: [{ src: "img/g1-1.jpg", cap: "คำบรรยาย" }],
-           team: [{ name: "ชื่อ สกุล", role: "Project Lead" }] }
+           team: [{ name: "ชื่อ สกุล", role: "Project Lead" }],
+           share: { topic, kind, words, clip, try, ref, ai } }   ← คลิปถ่ายทอดความรู้สู่รุ่นน้อง (MC12 สัปดาห์ที่ 17 · เพิ่มหลังครูอนุมัติ ไม่มีก็ได้)
    ห้ามใส่รหัสนักเรียน เลขที่ เบอร์โทร หรืออีเมล
    หน้าตัวอย่าง (ข้อมูลสมมติ) กำหนด window.PF_SAMPLE = { id, name, path, pf } แทน
    ===================================================================== */
@@ -42,6 +43,16 @@
       '<figcaption><b>FIG.' + (i + 1) + '</b>' + esc(p.cap) + '</figcaption></figure>';
   }).join('');
   const ev = embed(pf.clip);
+  const sh = pf.share && pf.share.topic ? pf.share : null;
+  const sv = sh ? embed(sh.clip) : '';
+  const shc = (k, t, cls) => sh && sh[k] ? '<div class="cell ' + (cls || '') + '"><h3>' + t + '</h3><p>' + esc(sh[k]) + '</p></div>' : '';
+  const share = sh ? '<section><div class="sh"><span class="no">05</span><h2>คลิปถ่ายทอดความรู้สู่รุ่นน้อง</h2><span class="dim"></span></div>' +
+    '<div class="cells">' + '<div class="cell wide"><h3>' + esc(sh.kind || 'KNOWLEDGE') + '</h3><p>' + esc(sh.topic) + '</p></div>' +
+    shc('words', 'KEY WORDS · ศัพท์น่ารู้') + shc('try', 'TRY IT · ลองทำเอง') + '</div>' +
+    '<div class="video" style="margin-top:14px">' + (sv ? '<iframe src="' + esc(sv) + '" title="คลิปถ่ายทอดความรู้ ' + esc(T.name) + '" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>'
+      : '<div class="ph">คลิปกำลังจัดทำ</div>') + '</div>' +
+    (sh.ref || sh.ai ? '<p class="note">' + (sh.ref ? 'แหล่งอ้างอิงและเครดิต: ' + esc(sh.ref) : '') + (sh.ref && sh.ai ? ' · ' : '') + (sh.ai ? 'การใช้ AI: ' + esc(sh.ai) : '') + '</p>' : '') +
+    '</section>' : '';
   const team = (pf.team || []).map(m => '<div><b>' + esc(m.role || 'MEMBER') + '</b>' + esc(m.name) + '</div>').join('');
   const notes = (T.notes || []).slice(0, 3).map(n => '<div class="nt"><b>W' + String(n.week || 0).padStart(2, '0') + '</b> ' +
     (n.strength ? 'จุดเด่น: ' + esc(n.strength) + ' ' : '') + (n.next ? '· ก้าวต่อไป: ' + esc(n.next) : '') + '</div>').join('');
@@ -54,7 +65,8 @@
     '<section><div class="sh"><span class="no">04</span><h2>คลิป 60 วินาที</h2><span class="dim"></span></div><div class="video">' +
       (ev ? '<iframe src="' + esc(ev) + '" title="คลิป 60 วินาที ' + esc(T.name) + '" loading="lazy" allow="encrypted-media; picture-in-picture" allowfullscreen></iframe>'
         : '<div class="ph">' + (window.PF_SAMPLE ? 'ตำแหน่งคลิป 60 วินาที (YouTube หรือ Google Drive)' : 'คลิปกำลังจัดทำ') + '</div>') + '</div></section>' +
-    '<section><div class="sh"><span class="no">05</span><h2>ทีมผู้จัดทำและก้าวต่อไป</h2><span class="dim"></span></div>' +
+    share +
+    '<section><div class="sh"><span class="no">' + (sh ? '06' : '05') + '</span><h2>ทีมผู้จัดทำและก้าวต่อไป</h2><span class="dim"></span></div>' +
       (team ? '<div class="team">' + team + '</div>' : '') +
       (pf.next ? '<div class="cells" style="margin-top:14px">' + cell('next', 'NEXT STEP · ก้าวต่อไป', 'wide') + '</div>' : '') +
       (notes ? '<div style="margin-top:14px"><div class="tag">MENTOR NOTES</div>' + notes + '</div>' : '') +

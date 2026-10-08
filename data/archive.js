@@ -204,4 +204,16 @@ window.IS2_ARCHIVE = [
     ],
   },
 
+  {
+    week: 17,
+    title: "MC12 Share the Knowledge",
+    items: [
+      { type: "สไลด์",  text: "สไลด์ MC12 Share the Knowledge",               link: "slides/w17-share-the-knowledge.html" },
+      { type: "ใบงาน",  text: "ใบงาน W17 สอนรุ่นน้องของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w17-teach-worksheet.pdf" },
+      { type: "ใบงาน",  text: "บทคลิปถ่ายทอดความรู้สู่รุ่นน้อง (กลุ่ม · ช่องคะแนนที่ 7)", link: "docs/w17-share-script.pdf" },
+      { type: "สื่อ",   text: "การ์ด Share the Knowledge สอนรุ่นน้องใน 3 นาที", link: "docs/w17-share-card.pdf" },
+      { type: "เว็บแอป", text: "เว็บแอปในคาบ: Share บทคลิปถ่ายทอดความรู้สู่รุ่นน้อง", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
+    ],
+  },
+
 ];
