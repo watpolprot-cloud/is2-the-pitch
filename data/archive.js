@@ -38,7 +38,6 @@ window.IS2_ARCHIVE = [
     title: "MC2 Restore – Upgrade – Pivot",
     items: [
       { type: "สไลด์",  text: "สไลด์ MC2 Restore – Upgrade – Pivot",        link: "slides/w03-restore-upgrade-pivot.html" },
-      { type: "ใบงาน",  text: "ใบงาน W03 Restore – Upgrade – Pivot (รายบุคคล)", link: "docs/w03-path-worksheet.pdf" },
       { type: "ใบงาน",  text: "เค้าโครงโครงงาน v2 (กลุ่ม)",                 link: "docs/w03-outline-v2.pdf" },
       { type: "ใบงาน",  text: "รายการวัสดุ (BOM) และแผนการสร้าง (กลุ่ม)",    link: "docs/w03-bom-build-plan.pdf" },
       { type: "สื่อ",   text: "การ์ด 3 เส้นทาง Restore – Upgrade – Pivot",   link: "docs/w03-path-cards.pdf" },
@@ -62,7 +61,6 @@ window.IS2_ARCHIVE = [
     title: "MC4 PROVE IT!",
     items: [
       { type: "สไลด์",  text: "สไลด์ MC4 PROVE IT!",                       link: "slides/w05-prove-it.html" },
-      { type: "ใบงาน",  text: "ใบงาน W05 PROVE IT! Test Plan Card (รายบุคคล)", link: "docs/w05-prove-it.pdf" },
       { type: "ใบงาน",  text: "การ์ด C-M-T-S ของกลุ่ม และแผนบทที่ 3 (กลุ่ม)", link: "docs/w05-cmts-chapter3.pdf" },
       { type: "สื่อ",   text: "การ์ด C-M-T-S และตัวตรวจ 8 ข้อ",              link: "docs/w05-cmts-card.pdf" },
       { type: "เว็บแอป", text: "เว็บแอปในคาบ: Claim Buster และการ์ด C-M-T-S ของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
@@ -74,7 +72,6 @@ window.IS2_ARCHIVE = [
     title: "MC5 Data Logger",
     items: [
       { type: "สไลด์",  text: "สไลด์ MC5 Data Logger",                     link: "slides/w06-data-logger.html" },
-      { type: "ใบงาน",  text: "ใบงาน W06 Data Logger เส้นทางข้อมูลของฉัน (รายบุคคล)", link: "docs/w06-data-logger.pdf" },
       { type: "ใบงาน",  text: "แผนเก็บข้อมูลและ Build Log (กลุ่ม)",          link: "docs/w06-logger-build-log.pdf" },
       { type: "สื่อ",   text: "แผ่นขั้นตอน ESP32 Data Logger และการแก้ปัญหา", link: "docs/w06-esp32-steps.pdf" },
       { type: "สื่อ",   text: "โค้ด ESP32 Data Logger (คัดลอก/ดาวน์โหลด)",    link: "media/w06-esp32-code.html" },
@@ -123,7 +120,6 @@ window.IS2_ARCHIVE = [
     title: "Build & Write Sprint",
     items: [
       { type: "สไลด์",  text: "สไลด์ Build & Write Sprint",                   link: "slides/w10-build-write-sprint.html" },
-      { type: "ใบงาน",  text: "ใบงาน W10 Sprint Card ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w10-sprint-card.pdf" },
       { type: "ใบงาน",  text: "แผน Sprint และรายการตรวจความพร้อมสัปดาห์ที่ 11 (กลุ่ม)", link: "docs/w10-sprint-plan.pdf" },
       { type: "สื่อ",   text: "การ์ด Sprint และคู่มือผลิตบอร์ดจริง",          link: "docs/w10-sprint-board-card.pdf" },
       { type: "เว็บแอป", text: "เว็บแอปในคาบ: Sprint Board งานก่อนสัปดาห์ที่ 11 ของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
@@ -135,7 +131,7 @@ window.IS2_ARCHIVE = [
     title: "MC8 Booth Experience & Judge Roulette",
     items: [
       { type: "สไลด์",  text: "สไลด์ MC8 Booth Experience & Judge Roulette",  link: "slides/w11-booth-judge.html" },
-      { type: "ใบงาน",  text: "ใบงาน W11 Judge Prep และบทบาทที่บูธ (รายบุคคล · ไม่มีคะแนน)", link: "docs/w11-judge-prep.pdf" },
+      { type: "ใบงาน",  text: "ใบงาน W11 Judge Prep ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w11-judge-prep.pdf" },
       { type: "ใบงาน",  text: "แผนเกมที่บูธ และรายการตรวจรับช่องคะแนนที่ 6 (กลุ่ม)", link: "docs/w11-booth-game-plan.pdf" },
       { type: "สื่อ",   text: "การ์ด Booth Experience และ Judge Roulette",   link: "docs/w11-booth-judge-card.pdf" },
       { type: "เว็บแอป", text: "เว็บแอปในคาบ: Booth Game Planner, Judge Prep และ Booth Check", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
@@ -160,7 +156,6 @@ window.IS2_ARCHIVE = [
     title: "MC9 After the Show",
     items: [
       { type: "สไลด์",  text: "สไลด์ MC9 After the Show",                      link: "slides/w13-after-the-show.html" },
-      { type: "ใบงาน",  text: "ใบงาน W13 After Action Review ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w13-after-action-review.pdf" },
       { type: "ใบงาน",  text: "แผนปรับรายงาน v2 จากข้อมูลงานเปิดบ้าน (กลุ่ม)", link: "docs/w13-report-v2-plan.pdf" },
       { type: "สื่อ",   text: "การ์ด After the Show และ Insight Check",       link: "docs/w13-after-show-card.pdf" },
       { type: "เว็บแอป", text: "เว็บแอปในคาบ: After the Show ข้อมูลวันงาน และ After Action Review ของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
@@ -172,7 +167,6 @@ window.IS2_ARCHIVE = [
     title: "MC10 Final Report Lab 1",
     items: [
       { type: "สไลด์",  text: "สไลด์ MC10 Final Report Lab 1",                link: "slides/w14-final-report-lab.html" },
-      { type: "ใบงาน",  text: "ใบงาน W14 Report Lab ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w14-report-lab.pdf" },
       { type: "ใบงาน",  text: "รายการตรวจรายงาน v2 และเส้นด้ายของกลุ่ม (กลุ่ม)", link: "docs/w14-report-checklist.pdf" },
       { type: "สื่อ",   text: "การ์ด Report Lab · เส้นด้ายเดียวกัน",           link: "docs/w14-golden-thread-card.pdf" },
       { type: "เว็บแอป", text: "เว็บแอปในคาบ: Report Lab เส้นด้ายและรายการตรวจรายงาน v2", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
@@ -184,7 +178,6 @@ window.IS2_ARCHIVE = [
     title: "MC10 Final Report Lab 2",
     items: [
       { type: "สไลด์",  text: "สไลด์ MC10 Final Report Lab 2",                link: "slides/w15-final-report-lab-2.html" },
-      { type: "ใบงาน",  text: "ใบงาน W15 Final Lab ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w15-final-lab.pdf" },
       { type: "ใบงาน",  text: "บทที่ 5 บทคัดย่อ และ AI Log ของกลุ่ม (กลุ่ม)", link: "docs/w15-chapter5-abstract.pdf" },
       { type: "สื่อ",   text: "การ์ด Final Lab · ปิดเล่มรายงาน v2",            link: "docs/w15-final-lab-card.pdf" },
       { type: "เว็บแอป", text: "เว็บแอปในคาบ: Final Lab บทที่ 5 บทคัดย่อ AI Log และบรรณานุกรม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
@@ -196,7 +189,6 @@ window.IS2_ARCHIVE = [
     title: "MC11 Digital Portfolio",
     items: [
       { type: "สไลด์",  text: "สไลด์ MC11 Digital Portfolio",                 link: "slides/w16-digital-portfolio.html" },
-      { type: "ใบงาน",  text: "ใบงาน W16 Portfolio ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w16-portfolio-worksheet.pdf" },
       { type: "ใบงาน",  text: "แผนหน้า Portfolio และสตอรีบอร์ดคลิป 60 วินาที (กลุ่ม · ช่องคะแนนที่ 7)", link: "docs/w16-portfolio-plan.pdf" },
       { type: "สื่อ",   text: "การ์ด Digital Portfolio และคลิป 60 วินาที",    link: "docs/w16-portfolio-card.pdf" },
       { type: "สื่อ",   text: "ตัวอย่างหน้า Portfolio (ข้อมูลสมมติ)",          link: "media/w16-portfolio-sample.html" },
@@ -209,7 +201,6 @@ window.IS2_ARCHIVE = [
     title: "MC12 Share the Knowledge",
     items: [
       { type: "สไลด์",  text: "สไลด์ MC12 Share the Knowledge",               link: "slides/w17-share-the-knowledge.html" },
-      { type: "ใบงาน",  text: "ใบงาน W17 สอนรุ่นน้องของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w17-teach-worksheet.pdf" },
       { type: "ใบงาน",  text: "บทคลิปถ่ายทอดความรู้สู่รุ่นน้อง (กลุ่ม · ช่องคะแนนที่ 7)", link: "docs/w17-share-script.pdf" },
       { type: "สื่อ",   text: "การ์ด Share the Knowledge สอนรุ่นน้องใน 3 นาที", link: "docs/w17-share-card.pdf" },
       { type: "เว็บแอป", text: "เว็บแอปในคาบ: Share บทคลิปถ่ายทอดความรู้สู่รุ่นน้อง", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
@@ -221,7 +212,6 @@ window.IS2_ARCHIVE = [
     title: "Campaign 3 Final Report",
     items: [
       { type: "สไลด์",  text: "สไลด์ Campaign 3 Final Report",                link: "slides/w18-final-report.html" },
-      { type: "ใบงาน",  text: "ใบงาน W18 Final Check ของฉัน (รายบุคคล · ไม่มีคะแนน)", link: "docs/w18-final-check.pdf" },
       { type: "ใบงาน",  text: "แบบส่งรายงาน v2 และ Cross-Check (กลุ่ม · ช่องคะแนนที่ 4)", link: "docs/w18-report-submit.pdf" },
       { type: "สื่อ",   text: "การ์ด Final Gate 5 ด่าน ก่อนกดส่งรายงาน v2",   link: "docs/w18-final-gate-card.pdf" },
       { type: "เว็บแอป", text: "เว็บแอปในคาบ: Final Report ส่งรายงาน v2 ของกลุ่ม", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
