@@ -22,15 +22,15 @@
 window.IS2_SITE = {
 
   week: 1,                              // สัปดาห์ที่กำลังเรียน (1-20)
-  updated: "3 ต.ค. 2569",               // วันที่ครูแก้ไฟล์นี้ล่าสุด
+  updated: "22 ต.ค. 2569",               // วันที่ครูแก้ไฟล์นี้ล่าสุด
 
   // ประกาศสั้นๆ แถบบนสุด (ไม่มีให้เว้นเป็น "")
-  announce: "เปิดภาคเรียน 26 ต.ค. 2569 · คาบแรกให้แต่ละกลุ่มนำชิ้นงาน ชิ้นส่วน และไฟล์จาก IS1 ที่ยังมีอยู่มาด้วย · จำเลขประจำตัวนักเรียน 5 หลักของตัวเอง ใบงานทุกหน้าต้องเขียน ม.5/4 เลขที่ และเลขประจำตัวในกรอบมุมขวาบน",
+  announce: "เปิดภาคเรียน 26 ต.ค. 2569 · คาบ IS2 ทุกวันจันทร์ คาบ 8–9 (14.20–16.00 น.) ห้อง 335 · คาบแรกให้แต่ละกลุ่มนำชิ้นงาน ชิ้นส่วน และไฟล์จาก IS1 ที่ยังมีอยู่มาด้วย · จำเลขประจำตัวนักเรียน 5 หลักของตัวเอง ใบงานทุกหน้าต้องเขียน ม.5/4 เลขที่ และเลขประจำตัวในกรอบมุมขวาบน",
 
   // ---------- สัปดาห์นี้ ----------
   thisWeek: {
     label: "สัปดาห์ที่ 1 · แผนที่ 1",
-    date: "",                           // วันที่และคาบที่เรียนจริง เช่น "พุธ 28 ต.ค. 2569 คาบ 5-6" (รอตารางสอน)
+    date: "จันทร์ 26 ต.ค. 2569 คาบ 8–9 (14.20–16.00 น.)",   // วันที่และคาบที่เรียนจริง
     title: "ปฐมนิเทศ “IS2 THE PITCH”",
     unit: "หน่วยที่ 1 Blueprint & Evidence",
     goals: [
@@ -65,28 +65,28 @@ window.IS2_SITE = {
     { text: "เว็บแอปในคาบ (โหวต บทบาท Runway Mission Log)", link: "https://script.google.com/macros/s/AKfycby9Emg9HGEli_fzRICZ2437bpW13ij-Iep_-lOuiUInV76zyv9K1-DhwPVNrQ4e00OE/exec" },
   ],
 
-  // ---------- เส้นทาง 20 สัปดาห์ (ช่วงวันที่เป็นค่าประมาณ จนกว่าตารางสอนและวันงานเปิดบ้านจะประกาศ) ----------
+  // ---------- เส้นทาง 20 สัปดาห์ (วันที่ = วันจันทร์ที่มีคาบ IS2 ตามตารางเรียนภาค 2/2569 · วันงานเปิดบ้านรอประกาศ) ----------
   calendar: [
-    { w: 1,  dates: "26–30 ต.ค. 69",       title: "ปฐมนิเทศ “IS2 THE PITCH”",                     slot: "" },
-    { w: 2,  dates: "2–6 พ.ย. 69",         title: "MC1 Project Health Check",                     slot: "1" },
-    { w: 3,  dates: "9–13 พ.ย. 69",        title: "MC2 Restore – Upgrade – Pivot · ปิดรับเปลี่ยนเรื่อง", slot: "1" },
-    { w: 4,  dates: "16–20 พ.ย. 69",       title: "MC3 Source Detective",                         slot: "3" },
-    { w: 5,  dates: "23–27 พ.ย. 69",       title: "MC4 PROVE IT!",                                slot: "3" },
-    { w: 6,  dates: "30 พ.ย.–4 ธ.ค. 69",   title: "MC5 Data Logger",                              slot: "" },
-    { w: 7,  dates: "7–11 ธ.ค. 69",        title: "MC6 Numbers Talk",                             slot: "2" },
-    { w: 8,  dates: "14–18 ธ.ค. 69",       title: "Campaign 1 Mid-Pitch Runway",                  slot: "5", campaign: true },
-    { w: 9,  dates: "21–25 ธ.ค. 69",       title: "MC7 Report Doctor & Board Design",             slot: "6" },
-    { w: 10, dates: "28 ธ.ค. 69–1 ม.ค. 70", title: "Build & Write Sprint (สัปดาห์สำรอง)",          slot: "" },
-    { w: 11, dates: "4–8 ม.ค. 70",         title: "MC8 Booth Experience & Judge Roulette",        slot: "6" },
-    { w: 12, dates: "11–15 ม.ค. 70",       title: "Campaign 2 Final Walk · งานเปิดบ้านวิชาการ (วันจริงรอประกาศ)", slot: "8, 9", campaign: true },
-    { w: 13, dates: "18–22 ม.ค. 70",       title: "MC9 After the Show",                           slot: "" },
-    { w: 14, dates: "25–29 ม.ค. 70",       title: "MC10 Final Report Lab 1",                      slot: "" },
-    { w: 15, dates: "1–5 ก.พ. 70",         title: "MC10 Final Report Lab 2",                      slot: "" },
-    { w: 16, dates: "8–12 ก.พ. 70",        title: "MC11 Digital Portfolio",                       slot: "7" },
-    { w: 17, dates: "15–19 ก.พ. 70",       title: "MC12 Share the Knowledge",                     slot: "7" },
-    { w: 18, dates: "22–26 ก.พ. 70",       title: "Campaign 3 Final Report",                      slot: "4", campaign: true },
-    { w: 19, dates: "1–5 มี.ค. 70",        title: "Season Finale",                                slot: "" },
-    { w: 20, dates: "8–12 มี.ค. 70",       title: "สรุปผลการเรียนรู้ · เก็บตกงานค้าง",              slot: "" },
+    { w: 1,  dates: "จ. 26 ต.ค. 69",       title: "ปฐมนิเทศ “IS2 THE PITCH”",                     slot: "" },
+    { w: 2,  dates: "จ. 2 พ.ย. 69",         title: "MC1 Project Health Check",                     slot: "1" },
+    { w: 3,  dates: "จ. 9 พ.ย. 69",        title: "MC2 Restore – Upgrade – Pivot · ปิดรับเปลี่ยนเรื่อง", slot: "1" },
+    { w: 4,  dates: "จ. 16 พ.ย. 69",       title: "MC3 Source Detective",                         slot: "3" },
+    { w: 5,  dates: "จ. 23 พ.ย. 69",       title: "MC4 PROVE IT!",                                slot: "3" },
+    { w: 6,  dates: "จ. 30 พ.ย. 69",   title: "MC5 Data Logger",                              slot: "" },
+    { w: 7,  dates: "จ. 7 ธ.ค. 69 · วันหยุด รอแจ้งวันชดเชย",        title: "MC6 Numbers Talk",                             slot: "2" },
+    { w: 8,  dates: "จ. 14 ธ.ค. 69",       title: "Campaign 1 Mid-Pitch Runway",                  slot: "5", campaign: true },
+    { w: 9,  dates: "จ. 21 ธ.ค. 69",       title: "MC7 Report Doctor & Board Design",             slot: "6" },
+    { w: 10, dates: "จ. 28 ธ.ค. 69", title: "Build & Write Sprint (สัปดาห์สำรอง)",          slot: "" },
+    { w: 11, dates: "จ. 4 ม.ค. 70",         title: "MC8 Booth Experience & Judge Roulette",        slot: "6" },
+    { w: 12, dates: "จ. 11 ม.ค. 70",       title: "Campaign 2 Final Walk · งานเปิดบ้านวิชาการ (วันจริงรอประกาศ)", slot: "8, 9", campaign: true },
+    { w: 13, dates: "จ. 18 ม.ค. 70",       title: "MC9 After the Show",                           slot: "" },
+    { w: 14, dates: "จ. 25 ม.ค. 70",       title: "MC10 Final Report Lab 1",                      slot: "" },
+    { w: 15, dates: "จ. 1 ก.พ. 70",         title: "MC10 Final Report Lab 2",                      slot: "" },
+    { w: 16, dates: "จ. 8 ก.พ. 70",        title: "MC11 Digital Portfolio",                       slot: "7" },
+    { w: 17, dates: "จ. 15 ก.พ. 70",       title: "MC12 Share the Knowledge",                     slot: "7" },
+    { w: 18, dates: "จ. 22 ก.พ. 70",       title: "Campaign 3 Final Report",                      slot: "4", campaign: true },
+    { w: 19, dates: "จ. 1 มี.ค. 70",        title: "Season Finale",                                slot: "" },
+    { w: 20, dates: "จ. 8 มี.ค. 70",       title: "สรุปผลการเรียนรู้ · เก็บตกงานค้าง",              slot: "" },
   ],
 
   // ข้อมูล 8 ทีม (Portfolio, Mentor's Notes) อยู่ที่ data/teams.js · คลังสื่อทุกสัปดาห์อยู่ที่ data/archive.js
