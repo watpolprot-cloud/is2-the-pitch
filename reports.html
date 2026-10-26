@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Team Report · IS2 THE PITCH</title>
+<link rel="icon" href="assets/crest.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+Thai:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ธีมเดียวกับหน้าหลัก: แบบพิมพ์เขียว (Blueprint) */
+:root{
+  --bp:#0c2d4f; --bp2:#0a2440; --bp3:#123a63;
+  --ln:rgba(173,216,255,.14); --ln2:rgba(173,216,255,.32);
+  --ink:#e8f2fc; --mute:#9db9d6; --cyan:#7fd3ff; --orange:#F0943A; --green:#8fe3b0;
+  --mono:'IBM Plex Mono',monospace; --head:'Chakra Petch','IBM Plex Sans Thai',sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);font-family:'IBM Plex Sans Thai','Sarabun',sans-serif;font-size:16px;line-height:1.65;
+  background-color:var(--bp);
+  background-image:
+    linear-gradient(var(--ln2) 1px,transparent 1px),linear-gradient(90deg,var(--ln2) 1px,transparent 1px),
+    linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);
+  background-size:100px 100px,100px 100px,20px 20px,20px 20px;background-position:-1px -1px}
+a{color:var(--cyan)}
+.sheet{max-width:1120px;margin:28px auto;padding:0 20px}
+.back{display:inline-block;margin-bottom:14px;font-family:var(--mono);font-size:12px;letter-spacing:1.5px;color:var(--cyan);text-decoration:none}
+.back:hover{color:var(--orange)}
+.frame{border:2px solid var(--ink);outline:1px solid var(--ln2);outline-offset:6px;position:relative;background:rgba(10,36,64,.55)}
+.crop{position:relative}
+.crop::before,.crop::after{content:"";position:absolute;width:18px;height:18px;border-color:var(--orange);border-style:solid}
+.crop::before{top:-7px;left:-7px;border-width:2px 0 0 2px}
+.crop::after{bottom:-7px;right:-7px;border-width:0 2px 2px 0}
+.hd{padding:28px 32px 22px;border-bottom:2px solid var(--ink)}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:3px;color:var(--orange)}
+h1{font-family:var(--head);font-size:44px;line-height:1.05;margin:6px 0 8px;letter-spacing:1.5px}
+h1 span{color:transparent;-webkit-text-stroke:1.3px var(--cyan)}
+.hd p{margin:0;color:var(--mute);font-size:15px}
+.tabs{display:flex;flex-wrap:wrap;border-bottom:2px solid var(--ink)}
+.tabs button{flex:0 0 auto;min-width:92px;background:none;border:none;border-right:1px solid var(--ln2);color:var(--ink);padding:11px 16px;font:600 13px var(--mono);letter-spacing:1.5px;cursor:pointer}
+.tabs button:hover{background:var(--bp3)}
+.tabs button.on{background:var(--orange);color:var(--bp)}
+.tabs .soon{color:var(--mute);font:12px var(--mono);letter-spacing:1px;padding:12px 16px}
+section{padding:30px 32px 26px;border-bottom:1px dashed var(--ln2)}
+section:last-child{border-bottom:none}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:16px}
+.sh .no{font-family:var(--mono);font-size:13px;color:var(--bp);background:var(--orange);padding:2px 9px;font-weight:600}
+.sh h2{font-family:var(--head);font-size:26px;margin:0;font-weight:700}
+.sh .dim{flex:1;height:1px;background:var(--ln2)}
+.sh small{font-family:var(--mono);color:var(--mute);font-size:11px;letter-spacing:2px}
+.label{display:inline-block;font-family:var(--mono),'IBM Plex Sans Thai',sans-serif;font-size:12.5px;border:1px solid var(--cyan);color:var(--cyan);padding:1px 8px;margin:0 6px 6px 0}
+.label.o{border-color:var(--orange);color:var(--orange)}
+.box{border:1.5px solid var(--ink);padding:20px 22px;background:rgba(12,45,79,.6)}
+.box h3{font-family:var(--head);font-size:24px;margin:2px 0 4px}
+.meta{color:var(--mute);font-size:14.5px;margin-bottom:10px}
+ul{margin:0;padding-left:0;list-style:none}
+ul li{position:relative;padding-left:22px;margin:4px 0}
+ul li::before{content:"";position:absolute;left:2px;top:.75em;width:10px;height:1px;background:var(--cyan)}
+ul li::after{content:"";position:absolute;left:11px;top:calc(.75em - 3px);width:1px;height:7px;background:var(--cyan)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1.5px solid var(--ink);margin-top:18px}
+.stat{padding:12px 14px;border-right:1px solid var(--ln2)}
+.stat:last-child{border-right:none}
+.stat b{display:block;font-family:var(--head);font-size:30px;line-height:1.1;color:var(--cyan)}
+.stat span{font-family:var(--mono);font-size:11px;letter-spacing:1.5px;color:var(--mute)}
+.bring{border-left:3px solid var(--orange);padding:10px 16px;background:rgba(240,148,58,.08);margin-top:18px;font-size:15px}
+.bring b{font-family:var(--mono);color:var(--orange);font-size:12px;letter-spacing:2px;margin-right:8px}
+.filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.filter button{background:rgba(10,36,64,.7);border:1px solid var(--ln2);color:var(--ink);padding:5px 12px;font:12px var(--mono);letter-spacing:1px;cursor:pointer}
+.filter button.on{border-color:var(--orange);color:var(--orange)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{border:1.5px solid var(--ink);background:rgba(12,45,79,.6);display:flex;flex-direction:column}
+.card .top{display:flex;gap:14px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--ln2);background-image:linear-gradient(var(--ln) 1px,transparent 1px),linear-gradient(90deg,var(--ln) 1px,transparent 1px);background-size:10px 10px}
+.card .top strong{font-family:var(--head);font-size:40px;line-height:1;color:transparent;-webkit-text-stroke:1.2px var(--cyan)}
+.card .top .nm{font-family:var(--head);font-size:17px;line-height:1.3}
+.card .chips{display:flex;flex-wrap:wrap;gap:6px;padding:10px 16px 0}
+.chip{font-family:var(--mono),'IBM Plex Sans Thai',sans-serif;font-size:12px;padding:1px 8px;border:1px solid var(--ln2);color:var(--mute)}
+.chip.path{border-color:var(--orange);color:var(--orange);letter-spacing:1px}
+.dg{padding:10px 16px 14px;display:grid;gap:8px}
+.dg div{display:grid;grid-template-columns:92px 1fr;gap:10px;font-size:15px;line-height:1.55}
+.dg i{font-style:normal;font-family:var(--mono);font-size:11px;letter-spacing:1.5px;padding-top:3px}
+.dg .s i{color:var(--green)} .dg .f i{color:var(--orange)} .dg .n i{color:var(--cyan)}
+.card details{border-top:1px dashed var(--ln2);padding:8px 16px;margin-top:auto}
+.card summary{cursor:pointer;font-family:var(--mono);font-size:11px;color:var(--cyan);letter-spacing:1px}
+.card table{border-collapse:collapse;width:100%;font-size:14px;margin:8px 0 4px}
+.card td{border:1px solid var(--ln2);padding:5px 8px;vertical-align:top}
+.card td.c{font-family:var(--mono);color:var(--cyan);text-align:center;width:44px}
+.card td.r{font-family:var(--mono);font-size:12px;color:var(--mute);white-space:nowrap}
+.note{font-family:var(--mono);color:var(--mute);font-size:11.5px;letter-spacing:.5px;margin:14px 0 0}
+.empty{color:var(--mute);padding:20px 0}
+@media (max-width:860px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--ln2)}}
+@media (max-width:560px){
+  body{font-size:15.5px}.sheet{margin:14px auto;padding:0 12px}
+  .hd{padding:22px 16px 18px}h1{font-size:30px}.tag{font-size:10.5px;letter-spacing:1.5px}
+  section{padding:24px 16px 20px}.box{padding:16px}
+  .sh h2{font-size:21px}.sh small{display:none}
+  .dg div{grid-template-columns:1fr;gap:0}
+  .card td.r{white-space:normal}
+}
+</style>
+</head>
+<body>
+<div class="sheet">
+<a class="back" href="index.html#teams">กลับหน้าหลักรายวิชา</a>
+<div class="frame crop">
+
+  <div class="hd">
+    <div class="tag">TEAM REPORT · WEEKLY WORKSHEET SUMMARY</div>
+    <h1>รายงาน <span>ใบงานกลุ่ม</span></h1>
+    <p>สรุปใบงานกลุ่มของ 8 ทีม ม.5/4 รายสัปดาห์ · จุดเด่น / ต้องแก้ / ก้าวต่อไป · ข้อมูลพัฒนาการเท่านั้น ไม่มีผลต่อเกรด</p>
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+  <div id="view"></div>
+
+</div>
+</div>
+
+<script src="data/reports.js"></script>
+<script>
+(function () {
+  const L = (window.IS2_REPORTS || []).slice().sort((a, b) => a.week - b.week);
+  const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const pad = n => String(n).padStart(2, '0');
+  const $ = id => document.getElementById(id);
+  let cur = null, pathF = 'ALL';
+
+  function tabs() {
+    $('tabs').innerHTML = L.map(r => '<button type="button" data-w="' + r.week + '"' + (r.week === cur ? ' class="on"' : '') + '>W' + pad(r.week) + '</button>').join('') +
+      '<span class="soon">สัปดาห์ถัดไปจะเพิ่มหลังครูตรวจใบงาน</span>';
+    $('tabs').querySelectorAll('button').forEach(b => b.onclick = () => { cur = +b.dataset.w; pathF = 'ALL'; save(); render(); });
+  }
+
+  function card(t) {
+    const mem = (t.members || []).map(m => '<tr><td class="c">' + esc(m.no) + '</td><td>' + esc(m.name) + '</td><td class="r">' + esc(m.role) + '</td></tr>').join('');
+    return '<div class="card"><div class="top"><strong>' + esc(t.id) + '</strong><div class="nm">' + esc(t.name || '') + '</div></div>' +
+      '<div class="chips">' + (t.path ? '<span class="chip path">PATH · ' + esc(t.path).toUpperCase() + '</span>' : '') +
+      (t.state ? '<span class="chip">ชิ้นงาน: ' + esc(t.state) + '</span>' : '') +
+      (t.files ? '<span class="chip">ไฟล์ IS1: ' + esc(t.files) + '</span>' : '') + '</div>' +
+      '<div class="dg">' +
+      (t.strength ? '<div class="s"><i>จุดเด่น</i><span>' + esc(t.strength) + '</span></div>' : '') +
+      (t.fix ? '<div class="f"><i>ต้องแก้</i><span>' + esc(t.fix) + '</span></div>' : '') +
+      (t.next ? '<div class="n"><i>ก้าวต่อไป</i><span>' + esc(t.next) + '</span></div>' : '') + '</div>' +
+      (mem ? '<details><summary>สมาชิกและบทบาท (' + t.members.length + ')</summary><table>' + mem + '</table></details>' : '') + '</div>';
+  }
+
+  function render() {
+    const r = L.find(x => x.week === cur);
+    tabs();
+    if (!r) { $('view').innerHTML = '<section><p class="empty">ยังไม่มีรายงาน</p></section>'; return; }
+    const T = r.teams || [];
+    const paths = [...new Set(T.map(t => t.path).filter(Boolean))];
+    const count = p => T.filter(t => t.path === p).length;
+    const stats = [['ส่งแล้ว', r.sent || (T.length + '/8')]].concat(paths.map(p => [p.toUpperCase(), count(p) + ' กลุ่ม'])).slice(0, 4);
+    const shown = T.filter(t => pathF === 'ALL' || t.path === pathF);
+    $('view').innerHTML =
+      '<section><div class="sh"><span class="no">W' + pad(r.week) + '</span><h2>ภาพรวมทั้งห้อง</h2><span class="dim"></span><small>OVERVIEW</small></div>' +
+      '<div class="box crop"><span class="label">' + esc(r.code || ('W' + pad(r.week))) + '</span>' + (r.scored ? '<span class="label o">' + esc(r.scored) + '</span>' : '') +
+      '<h3>' + esc(r.title) + '</h3><div class="meta">' + esc([r.sheet, r.date].filter(Boolean).join(' · ')) + '</div>' +
+      '<ul>' + (r.overview || []).map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>' +
+      '<div class="stats">' + stats.map(s => '<div class="stat"><b>' + esc(s[1]) + '</b><span>' + esc(s[0]) + '</span></div>').join('') + '</div>' +
+      (r.bring ? '<div class="bring"><b>NEXT</b>' + esc(r.bring) + '</div>' : '') + '</div></section>' +
+      '<section><div class="sh"><span class="no">8</span><h2>รายงานรายกลุ่ม</h2><span class="dim"></span><small>TEAM SHEETS</small></div>' +
+      (paths.length > 1 ? '<div class="filter">' + ['ALL'].concat(paths).map(p => '<button type="button" data-p="' + esc(p) + '"' + (p === pathF ? ' class="on"' : '') + '>' + (p === 'ALL' ? 'ทุกกลุ่ม' : esc(p.toUpperCase())) + '</button>').join('') + '</div>' : '') +
+      '<div class="grid">' + shown.map(card).join('') + '</div>' +
+      '<p class="note">* ครูสรุปจากใบงานที่กลุ่มส่ง · ถ้าข้อมูลกลุ่มไม่ตรงความจริง แจ้งครูในคาบเพื่อแก้ไข</p></section>';
+    $('view').querySelectorAll('.filter button').forEach(b => b.onclick = () => { pathF = b.dataset.p; render(); });
+  }
+
+  function save() { try { localStorage.setItem('is2-report-week', cur); } catch (e) {} }
+  let saved = null;
+  try { saved = +localStorage.getItem('is2-report-week'); } catch (e) {}
+  const hash = +(location.hash.match(/^#w(\d+)$/i) || [])[1];
+  cur = [hash, saved].find(w => L.some(r => r.week === w)) || (L.length ? L[L.length - 1].week : null);
+  render();
+})();
+</script>
+</body>
+</html>
