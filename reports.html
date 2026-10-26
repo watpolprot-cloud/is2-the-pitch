@@ -87,6 +87,19 @@ ul li::after{content:"";position:absolute;left:11px;top:calc(.75em - 3px);width:
 .card td.c{font-family:var(--mono);color:var(--cyan);text-align:center;width:44px}
 .card td.r{font-family:var(--mono);font-size:12px;color:var(--mute);white-space:nowrap}
 .note{font-family:var(--mono);color:var(--mute);font-size:11.5px;letter-spacing:.5px;margin:14px 0 0}
+.nos{display:grid;grid-template-columns:repeat(10,1fr);gap:6px;margin-top:16px}
+.tile{border:1px solid var(--ln2);text-align:center;padding:8px 0 6px;font-family:var(--mono);font-size:15px;font-weight:600;line-height:1.1}
+.tile small{display:block;font-size:10px;font-weight:400;letter-spacing:.5px;margin-top:3px}
+.tile.ok{border-color:var(--green);color:var(--green);background:rgba(143,227,176,.08)}
+.tile.part{border-color:var(--orange);color:var(--orange);background:rgba(240,148,58,.12)}
+.tile.none{border-style:dashed;color:var(--mute)}
+.tile.check{border-color:var(--cyan);color:var(--cyan);border-style:dotted}
+.key{display:flex;flex-wrap:wrap;gap:16px;font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-top:12px}
+.key i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px;border:1px solid}
+.more{margin-top:14px;font-size:15px}
+.more b{font-family:var(--mono);color:var(--orange);font-weight:600}
+@media (max-width:860px){.nos{grid-template-columns:repeat(8,1fr)}}
+@media (max-width:560px){.nos{grid-template-columns:repeat(5,1fr)}}
 .empty{color:var(--mute);padding:20px 0}
 @media (max-width:860px){.grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--ln2)}}
 @media (max-width:560px){
@@ -107,7 +120,7 @@ ul li::after{content:"";position:absolute;left:11px;top:calc(.75em - 3px);width:
   <div class="hd">
     <div class="tag">TEAM REPORT · WEEKLY WORKSHEET SUMMARY</div>
     <h1>รายงาน <span>ใบงานกลุ่ม</span></h1>
-    <p>สรุปใบงานกลุ่มของ 8 ทีม ม.5/4 รายสัปดาห์ · จุดเด่น / ต้องแก้ / ก้าวต่อไป · ข้อมูลพัฒนาการเท่านั้น ไม่มีผลต่อเกรด</p>
+    <p>สรุปใบงานกลุ่มของ 8 ทีม และสถานะการส่งใบงานรายบุคคลตามเลขที่ ม.5/4 รายสัปดาห์ · ข้อมูลพัฒนาการเท่านั้น ไม่มีผลต่อเกรด</p>
   </div>
 
   <div class="tabs" id="tabs"></div>
@@ -144,6 +157,23 @@ ul li::after{content:"";position:absolute;left:11px;top:calc(.75em - 3px);width:
       (mem ? '<details><summary>สมาชิกและบทบาท (' + t.members.length + ')</summary><table>' + mem + '</table></details>' : '') + '</div>';
   }
 
+  function indiv(r) {
+    const I = r.individual; if (!I) return '';
+    const S = I.status || {}, M = I.more || {};
+    const st = n => (S.ok || []).includes(n) ? ['ok', 'ครบ'] : (S.part || []).includes(n) ? ['part', 'ไม่ครบ'] : (S.check || []).includes(n) ? ['check', 'ครูตรวจ'] : ['none', 'ยังไม่ส่ง'];
+    const tiles = Array.from({length: 40}, (_, i) => { const s = st(i + 1); return '<div class="tile ' + s[0] + '" title="' + esc('เลขที่ ' + (i + 1) + ' · ' + s[1]) + '">' + (i + 1) + '<small>' + s[1] + '</small></div>'; }).join('');
+    const more = Object.keys(M).sort((a, b) => a - b).map(n => '<li><b>เลขที่ ' + esc(n) + '</b> ' + esc(M[n]) + '</li>').join('');
+    return '<section><div class="sh"><span class="no">ME</span><h2>ใบงานรายบุคคล</h2><span class="dim"></span><small>INDIVIDUAL · BY CLASS NO.</small></div>' +
+      '<div class="box crop"><span class="label">' + esc(I.code) + '</span>' + (I.scored ? '<span class="label o">' + esc(I.scored) + '</span>' : '') +
+      '<h3>' + esc(I.title) + '</h3><div class="meta">' + esc(I.checked || '') + '</div>' +
+      '<ul>' + (I.overview || []).map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>' +
+      '<div class="nos">' + tiles + '</div>' +
+      '<div class="key"><span><i style="border-color:var(--green);background:rgba(143,227,176,.2)"></i>ส่งครบ</span><span><i style="border-color:var(--orange);background:rgba(240,148,58,.25)"></i>ส่งไม่ครบ</span><span><i style="border-color:var(--mute);border-style:dashed"></i>ยังไม่ส่ง</span><span><i style="border-color:var(--cyan);border-style:dotted"></i>ครูกำลังตรวจหน้าสแกน</span></div>' +
+      (more ? '<div class="more"><h4 style="font-family:var(--mono);font-size:12px;letter-spacing:2px;color:var(--orange);margin:6px 0">ต้องส่งเพิ่ม</h4><ul>' + more + '</ul></div>' : '') +
+      (I.resubmit ? '<div class="bring"><b>RESUBMIT</b>' + esc(I.resubmit) + '</div>' : '') +
+      '<p class="note">* แสดงเฉพาะสถานะการส่งตามเลขที่ ไม่แสดงชื่อ เลขประจำตัว หรือคำวินิจฉัยรายคน · ถ้าส่งแล้วแต่ขึ้นว่าไม่ครบหรือยังไม่ส่ง แจ้งครูในคาบ</p></div></section>';
+  }
+
   function render() {
     const r = L.find(x => x.week === cur);
     tabs();
@@ -160,6 +190,7 @@ ul li::after{content:"";position:absolute;left:11px;top:calc(.75em - 3px);width:
       '<ul>' + (r.overview || []).map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>' +
       '<div class="stats">' + stats.map(s => '<div class="stat"><b>' + esc(s[1]) + '</b><span>' + esc(s[0]) + '</span></div>').join('') + '</div>' +
       (r.bring ? '<div class="bring"><b>NEXT</b>' + esc(r.bring) + '</div>' : '') + '</div></section>' +
+      indiv(r) +
       '<section><div class="sh"><span class="no">8</span><h2>รายงานรายกลุ่ม</h2><span class="dim"></span><small>TEAM SHEETS</small></div>' +
       (paths.length > 1 ? '<div class="filter">' + ['ALL'].concat(paths).map(p => '<button type="button" data-p="' + esc(p) + '"' + (p === pathF ? ' class="on"' : '') + '>' + (p === 'ALL' ? 'ทุกกลุ่ม' : esc(p.toUpperCase())) + '</button>').join('') + '</div>' : '') +
       '<div class="grid">' + shown.map(card).join('') + '</div>' +
