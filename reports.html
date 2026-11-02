@@ -183,18 +183,18 @@ ul li::after{content:"";position:absolute;left:11px;top:calc(.75em - 3px);width:
     const count = p => T.filter(t => t.path === p).length;
     const stats = [['ส่งแล้ว', r.sent || (T.length + '/8')]].concat(paths.map(p => [p.toUpperCase(), count(p) + ' กลุ่ม'])).slice(0, 4);
     const shown = T.filter(t => pathF === 'ALL' || t.path === pathF);
-    $('view').innerHTML =
+    $('view').innerHTML = (r.title ?
       '<section><div class="sh"><span class="no">W' + pad(r.week) + '</span><h2>ภาพรวมทั้งห้อง</h2><span class="dim"></span><small>OVERVIEW</small></div>' +
       '<div class="box crop"><span class="label">' + esc(r.code || ('W' + pad(r.week))) + '</span>' + (r.scored ? '<span class="label o">' + esc(r.scored) + '</span>' : '') +
       '<h3>' + esc(r.title) + '</h3><div class="meta">' + esc([r.sheet, r.date].filter(Boolean).join(' · ')) + '</div>' +
       '<ul>' + (r.overview || []).map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>' +
       '<div class="stats">' + stats.map(s => '<div class="stat"><b>' + esc(s[1]) + '</b><span>' + esc(s[0]) + '</span></div>').join('') + '</div>' +
-      (r.bring ? '<div class="bring"><b>NEXT</b>' + esc(r.bring) + '</div>' : '') + '</div></section>' +
-      indiv(r) +
+      (r.bring ? '<div class="bring"><b>NEXT</b>' + esc(r.bring) + '</div>' : '') + '</div></section>' : '') +
+      indiv(r) + (T.length ?
       '<section><div class="sh"><span class="no">8</span><h2>รายงานรายกลุ่ม</h2><span class="dim"></span><small>TEAM SHEETS</small></div>' +
       (paths.length > 1 ? '<div class="filter">' + ['ALL'].concat(paths).map(p => '<button type="button" data-p="' + esc(p) + '"' + (p === pathF ? ' class="on"' : '') + '>' + (p === 'ALL' ? 'ทุกกลุ่ม' : esc(p.toUpperCase())) + '</button>').join('') + '</div>' : '') +
       '<div class="grid">' + shown.map(card).join('') + '</div>' +
-      '<p class="note">* ครูสรุปจากใบงานที่กลุ่มส่ง · ถ้าข้อมูลกลุ่มไม่ตรงความจริง แจ้งครูในคาบเพื่อแก้ไข</p></section>';
+      '<p class="note">* ครูสรุปจากใบงานที่กลุ่มส่ง · ถ้าข้อมูลกลุ่มไม่ตรงความจริง แจ้งครูในคาบเพื่อแก้ไข</p></section>' : '');
     $('view').querySelectorAll('.filter button').forEach(b => b.onclick = () => { pathF = b.dataset.p; render(); });
   }
 
