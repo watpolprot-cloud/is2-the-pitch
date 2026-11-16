@@ -57,7 +57,7 @@ window.IS2_SITE = {
   },
 
   // สัปดาห์หน้า (แสดงสั้นๆ ใต้สัปดาห์นี้)
-  nextWeek: "สัปดาห์ที่ 4 · MC3 Source Detective · สืบค้นและประเมินแหล่งข้อมูล อ้างอิงแบบ APA เริ่มบทที่ 2 · จัดหาวัสดุตาม BOM และนำเค้าโครง v2 มาด้วย (วันเรียนครูจะแจ้งในกลุ่ม LINE)",
+  nextWeek: "สัปดาห์ที่ 4 · MC3 Source Detective · สืบค้นและประเมินแหล่งข้อมูล อ้างอิงแบบ APA เริ่มบทที่ 2 · จัดหาวัสดุตาม BOM และนำเค้าโครง v2 มาด้วย · จ. 23 พ.ย. 69 เรียนรวมกับ MC4 PROVE IT! (ออกแบบการทดสอบ C-M-T-S สู่บทที่ 3)",
 
   // ลิงก์ประจำรายวิชา
   links: [
@@ -69,8 +69,8 @@ window.IS2_SITE = {
     { w: 1,  dates: "จ. 26 ต.ค. 69",       title: "ปฐมนิเทศ “IS2 THE PITCH”",                     slot: "" },
     { w: 2,  dates: "จ. 2 พ.ย. 69",         title: "MC1 Project Health Check",                     slot: "1" },
     { w: 3,  dates: "จ. 16 พ.ย. 69 (เลื่อนจาก 9 พ.ย.)",      title: "MC2 Restore – Upgrade – Pivot · ปิดรับเปลี่ยนเรื่อง", slot: "1" },
-    { w: 4,  dates: "รอยืนยันวัน",        title: "MC3 Source Detective",                         slot: "3" },
-    { w: 5,  dates: "จ. 23 พ.ย. 69",       title: "MC4 PROVE IT!",                                slot: "3" },
+    { w: 4,  dates: "จ. 23 พ.ย. 69 (รวมกับ MC4)",      title: "MC3 Source Detective",                         slot: "3" },
+    { w: 5,  dates: "จ. 23 พ.ย. 69 (รวมกับ MC3)",      title: "MC4 PROVE IT!",                                slot: "3" },
     { w: 6,  dates: "จ. 30 พ.ย. 69",   title: "MC5 Data Logger",                              slot: "" },
     { w: 7,  dates: "จ. 14 ธ.ค. 69 (เลื่อน · 7 ธ.ค. หยุด)",        title: "MC6 Numbers Talk",                             slot: "2" },
     { w: 8,  dates: "จ. 21 ธ.ค. 69 (เลื่อน)",       title: "Campaign 1 Mid-Pitch Runway",                  slot: "5", campaign: true },
